@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314282437223",
+    "project_id": "wegather-44378",
+    "storage_bucket": "wegather-44378.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314282437223:android:7759604895c278bf46c2c2",
+        "android_client_info": {
+          "package_name": "com.example.wegather_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4v4oJvUOCLMEy19kTV0yoARa2GlRf_HY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

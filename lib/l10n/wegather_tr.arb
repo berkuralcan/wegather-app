@@ -1,0 +1,44 @@
+{
+    "@@locale": "tr",
+    "helloWorld": "Merhaba Dünya!",
+    "@helloWorld": {
+        "description": "Tipik bir merhaba mesajı"
+    },
+    "title": "WeGather - Toplanmanın Yeni Yolu",
+    "@title": {
+        "description": "Uygulamanın başlığı"
+    },
+    "login_emailAddress": "E-posta Adresi",
+    "@login_emailAddress": {
+        "description": "E-posta adresi alanının etiketi"
+    },
+    "login_password": "Şifre",
+    "@login_password": {
+        "description": "Şifre alanının etiketi"
+    },
+    "login_login": "Giriş Yap",
+    "@login_login": {
+        "description": "Giriş yap butonunun etiketi"
+    },
+    "login_invalidCredentials": "Kullanıcı adı veya şifre hatalı",
+    "@login_invalidCredentials": {
+        "description": "Hata mesajı kullanıcı adı veya şifre hatalı"
+    },
+    "login_loading": "Giriş yapılıyor...",
+    "@login_loading": {
+        "description": "Giriş yapılıyor mesajı"
+    },
+    "login_networkError": "Ağ hatası oluştu. Lütfen daha sonra tekrar deneyin.",
+    "@login_networkError": {
+        "description": "Ağ hatası oluştu mesajı"
+    },
+    "homeIcon_my_profile": "Profilim",
+    "homeIcon_my_qr_code": "QR Kodum",
+    "homeIcon_event_program": "Etkinlik Programı",
+    "homeIcon_flight_info": "Uçuş Bilgilerim",
+    "homeIcon_transportation": "Ulaşım",
+    "homeIcon_stay_info": "Konaklama",
+    "homeIcon_documents": "Dokümanlar",
+    "homeIcon_announcements": "Duyurular",
+    "homeIcon_support": "Destek"
+}

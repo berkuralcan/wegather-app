@@ -1,0 +1,44 @@
+{
+    "@@locale": "en",
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+        "description": "A standard hello world message"
+    },
+    "title": "WeGather - The best way to gather",
+    "@title": {
+        "description": "The title of the app"
+    },
+    "login_emailAddress": "E-Mail Address",
+    "@login_emailAddress": {
+        "description": "The label of the username field"
+    },
+    "login_password": "Password",
+    "@login_password": {
+        "description": "The label of the password field"
+    },
+    "login_login": "Login",
+    "@login_login": {
+        "description": "The label of the login button"
+    },
+    "login_invalidCredentials": "Invalid username or password",
+    "@login_invalidCredentials": {
+        "description": "The error message for invalid username or password"
+    },
+    "login_loading": "Logging in...",
+    "@login_loading": {
+        "description": "The loading message"
+    },
+    "login_networkError": "Network error. Please try again later.",
+    "@login_networkError": {
+        "description": "The error message for network error"
+    },
+    "homeIcon_my_profile": "My Profile",
+    "homeIcon_my_qr_code": "My QR Code",
+    "homeIcon_event_program": "Event Program",
+    "homeIcon_flight_info": "Flight Info",
+    "homeIcon_transportation": "Transportation",
+    "homeIcon_stay_info": "Stay Information",
+    "homeIcon_documents": "Documents",
+    "homeIcon_announcements": "Announcements",
+    "homeIcon_support": "Support"
+}

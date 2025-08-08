@@ -59,4 +59,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get homeIcon_support => 'Destek';
+
+  @override
+  String get profile_title => 'Profil';
 }

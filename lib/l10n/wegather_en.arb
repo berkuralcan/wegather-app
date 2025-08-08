@@ -40,5 +40,6 @@
     "homeIcon_stay_info": "Stay Information",
     "homeIcon_documents": "Documents",
     "homeIcon_announcements": "Announcements",
-    "homeIcon_support": "Support"
+    "homeIcon_support": "Support",
+    "profile_title": "Profile"
 }

@@ -56,6 +56,6 @@ class ProfileService {
     return social.instagram != null || 
            social.facebook != null || 
            social.twitter != null || 
-           social.linkedin != null;
+           social.linkedIn != null;
   }
 }

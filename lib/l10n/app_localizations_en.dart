@@ -58,4 +58,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeIcon_support => 'Support';
+
+  @override
+  String get profile_title => 'Profile';
 }

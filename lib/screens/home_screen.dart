@@ -19,9 +19,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_my_profile,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            print(user?.uid);
-            context.go('/profile/${user?.uid ?? 'test-id'}');
-
+            context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {

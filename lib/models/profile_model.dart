@@ -54,13 +54,13 @@ class ProfileSocialMedia {
   final String? instagram;
   final String? facebook;
   final String? twitter;
-  final String? linkedin;
+  final String? linkedIn;
 
   ProfileSocialMedia({
     this.instagram,
     this.facebook,
     this.twitter,
-    this.linkedin,
+    this.linkedIn,
   });
 
   factory ProfileSocialMedia.fromJson(Map<String, dynamic> json) {
@@ -68,7 +68,7 @@ class ProfileSocialMedia {
       instagram: json['instagram'],
       facebook: json['facebook'],
       twitter: json['twitter'],
-      linkedin: json['linkedin'],
+      linkedIn: json['linkedIn'],
     );
   }
 
@@ -77,7 +77,7 @@ class ProfileSocialMedia {
       'instagram': instagram,
       'facebook': facebook,
       'twitter': twitter,
-      'linkedin': linkedin,
+      'linkedIn': linkedIn,
     };
   }
 
@@ -85,13 +85,13 @@ class ProfileSocialMedia {
     String? instagram,
     String? facebook,
     String? twitter,
-    String? linkedin,
+    String? linkedIn,
   }) {
     return ProfileSocialMedia(
       instagram: instagram ?? this.instagram,
       facebook: facebook ?? this.facebook,
       twitter: twitter ?? this.twitter,
-      linkedin: linkedin ?? this.linkedin,
+      linkedIn: linkedIn ?? this.linkedIn,
     );
   }
 }

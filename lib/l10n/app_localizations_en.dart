@@ -61,4 +61,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profile_title => 'Profile';
+
+  @override
+  String get profile_change_profile_photo => 'Change Profile Photo';
+
+  @override
+  String get profile_take_photo => 'Take a New Photo';
+
+  @override
+  String get profile_choose_from_gallery => 'Choose from Gallery';
 }

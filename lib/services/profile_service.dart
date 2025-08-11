@@ -1,8 +1,11 @@
 import '../models/profile_model.dart';
 import '../repositories/profile_repository.dart';
+import '../auth_services.dart';
+import 'dart:io';
 
 class ProfileService {
   final ProfileRepository _profileRepository = ProfileRepository();
+  final AuthService _authService = AuthService();
 
   // Get profile by ID with business logic
   Future<ProfileModel?> getProfile(String profileId) async {
@@ -20,15 +23,7 @@ class ProfileService {
     return profiles;
   }
 
-  // Get current user's profile (placeholder - you'll implement this with auth)
-  Future<ProfileModel?> getCurrentUserProfile() async {
-    // TODO: Get current user ID from AuthService
-    // final currentUserId = AuthService.getCurrentUserId();
-    // return await getProfile(currentUserId);
-    
-    // For now, return null - you'll implement this when you add auth
-    return null;
-  }
+
 
   // Validate profile data before saving
   bool validateProfile(ProfileModel profile) {
@@ -57,5 +52,58 @@ class ProfileService {
            social.facebook != null || 
            social.twitter != null || 
            social.linkedIn != null;
+  }
+
+  /// Uploads a profile image and updates the user's profile document
+  /// Returns the download URL of the uploaded image
+  Future<String> uploadProfileImage(File imageFile) async {
+    // Ensure user is authenticated
+    final currentUser = _authService.currentUser;
+    if (currentUser == null) {
+      throw Exception('User must be authenticated to upload profile image');
+    }
+
+    try {
+      // Upload the image to Firebase Storage
+      final imageUrl = await _profileRepository.uploadProfileImage(imageFile);
+      
+      // Update the user's profile document with the new image URL
+      await _profileRepository.updateProfileImage(currentUser.uid, imageUrl);
+      
+      return imageUrl;
+    } catch (e) {
+      throw Exception('Failed to upload and update profile image: $e');
+    }
+  }
+
+  /// Gets the current authenticated user's profile
+  Future<ProfileModel?> getCurrentUserProfile() async {
+    final currentUser = _authService.currentUser;
+    if (currentUser == null) {
+      return null;
+    }
+    return await getProfile(currentUser.uid);
+  }
+
+  /// Deletes the current user's profile image
+  Future<bool> deleteCurrentUserProfileImage() async {
+    final currentUser = _authService.currentUser;
+    if (currentUser == null) {
+      throw Exception('User must be authenticated to delete profile image');
+    }
+
+    try {
+      // Delete from storage
+      final deleted = await _profileRepository.deleteProfileImage(currentUser.uid);
+      
+      if (deleted) {
+        // Update profile document to remove image URL
+        await _profileRepository.updateProfileImage(currentUser.uid, '');
+      }
+      
+      return deleted;
+    } catch (e) {
+      throw Exception('Failed to delete profile image: $e');
+    }
   }
 }

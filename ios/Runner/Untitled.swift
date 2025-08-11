@@ -1,0 +1,7 @@
+//
+//  Untitled.swift
+//  Runner
+//
+//  Created by Berk Uralcan on 11.08.2025.
+//
+

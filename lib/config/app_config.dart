@@ -6,4 +6,6 @@ class AppConfig {
   static const String appLogo = "assets/images/app-default-logo.png";
   static const String noProfileImage = "assets/images/no-profile-image.png";
   static const String cameraIcon = "assets/icons/profile_camera.png";
+  static const String companyName = "WeGather";
+  static const String defaultEventName = "WeGather Event";
 }

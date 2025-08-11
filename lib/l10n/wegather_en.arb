@@ -41,5 +41,8 @@
     "homeIcon_documents": "Documents",
     "homeIcon_announcements": "Announcements",
     "homeIcon_support": "Support",
-    "profile_title": "Profile"
+    "profile_title": "Profile",
+    "profile_change_profile_photo": "Change Profile Photo",
+    "profile_take_photo": "Take a New Photo",
+    "profile_choose_from_gallery": "Choose from Gallery"
 }

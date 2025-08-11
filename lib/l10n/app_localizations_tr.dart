@@ -62,4 +62,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get profile_title => 'Profil';
+
+  @override
+  String get profile_change_profile_photo => 'Profil Fotoğrafını Değiştir';
+
+  @override
+  String get profile_take_photo => 'Yeni Fotoğraf Çek';
+
+  @override
+  String get profile_choose_from_gallery => 'Galeriden Seç';
 }

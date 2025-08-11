@@ -1,14 +1,14 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class LiquidContainer extends StatelessWidget {
+class LiquidContainerWithDilate extends StatelessWidget {
   final Widget child;
   final double blur;
   final double opacity;
   final Color tintColor;
   final BorderRadius borderRadius;
 
-  const LiquidContainer({
+  const LiquidContainerWithDilate({
     super.key,
     required this.child,
     this.blur = 2.0,
@@ -39,8 +39,8 @@ class LiquidContainer extends StatelessWidget {
             filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
             child: BackdropFilter(
               filter: ImageFilter.dilate(
-                radiusX: 1,
-                radiusY: 1
+                radiusX: 4,
+                radiusY: 4
               ),
               child:CustomPaint(
               painter: GradientBorderPainter(
@@ -48,9 +48,9 @@ class LiquidContainer extends StatelessWidget {
                 borderWidth: 1.0,
                 gradient: LinearGradient(
                   colors: [
-                    Colors.white.withValues(alpha: 0.4),
-                    Colors.white.withValues(alpha: 0.2),
-                    Colors.white.withValues(alpha: 0.4),
+                    const Color.fromARGB(255, 1, 200, 255).withValues(alpha: 0.2),
+                    const Color.fromARGB(255, 255, 255, 255).withValues(alpha: 0.4),
+                    const Color.fromARGB(255, 1, 200, 255).withValues(alpha: 0.2),
                   ],
                   stops: const [0.0, 0.55, 1.0],
                   begin: Alignment.topLeft,

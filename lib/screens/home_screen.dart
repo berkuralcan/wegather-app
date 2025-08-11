@@ -26,7 +26,9 @@ class HomeScreen extends ConsumerWidget {
         "iconPath": "assets/icons/qr.png",
         "title": AppLocalizations.of(context)!.homeIcon_my_qr_code,
         "iconSize": Size(50.42, 50.42),
-        "onTap": () {},
+        "onTap": () {
+          context.push('/liquid');
+        },
       },
       {
         "iconPath": "assets/icons/calendar-2.png",

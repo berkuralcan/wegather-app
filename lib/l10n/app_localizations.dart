@@ -205,6 +205,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile'**
   String get profile_title;
+
+  /// No description provided for @profile_change_profile_photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Profile Photo'**
+  String get profile_change_profile_photo;
+
+  /// No description provided for @profile_take_photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a New Photo'**
+  String get profile_take_photo;
+
+  /// No description provided for @profile_choose_from_gallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from Gallery'**
+  String get profile_choose_from_gallery;
 }
 
 class _AppLocalizationsDelegate

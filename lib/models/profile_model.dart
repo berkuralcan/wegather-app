@@ -4,6 +4,7 @@ class ProfileModel {
   final String email;
   final String title;
   final ProfileSocialMedia socialMedia;
+  final String profileImage;
 
   ProfileModel({
     required this.id,
@@ -11,6 +12,7 @@ class ProfileModel {
     required this.email,
     required this.title,
     required this.socialMedia,
+    required this.profileImage,
   });
 
   factory ProfileModel.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class ProfileModel {
       email: json['email'] ?? '',
       title: json['title'] ?? '',
       socialMedia: ProfileSocialMedia.fromJson(json['socialMedia'] ?? {}),
+      profileImage: json['profileImage'] ?? '',
     );
   }
 
@@ -30,6 +33,7 @@ class ProfileModel {
       'email': email,
       'title': title,
       'socialMedia': socialMedia.toJson(),
+      'profileImage': profileImage,
     };
   }
 
@@ -39,6 +43,7 @@ class ProfileModel {
     String? email,
     String? title,
     ProfileSocialMedia? socialMedia,
+    String? profileImage,
   }) {
     return ProfileModel(
       id: id ?? this.id,
@@ -46,6 +51,7 @@ class ProfileModel {
       email: email ?? this.email,
       title: title ?? this.title,
       socialMedia: socialMedia ?? this.socialMedia,
+      profileImage: profileImage ?? this.profileImage,
     );
   }
 }

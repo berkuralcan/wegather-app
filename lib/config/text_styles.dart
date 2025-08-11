@@ -17,7 +17,7 @@ class AppTextStyles {
   static const smallTitleTextStyle = TextStyle(
     fontFamily: "Inter",
     fontSize: 20,
-    letterSpacing: 0.15,
+    letterSpacing: 3,
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );

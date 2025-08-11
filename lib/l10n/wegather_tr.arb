@@ -41,5 +41,8 @@
     "homeIcon_documents": "Dokümanlar",
     "homeIcon_announcements": "Duyurular",
     "homeIcon_support": "Destek",
-    "profile_title": "Profil"
+    "profile_title": "Profil",
+    "profile_change_profile_photo": "Profil Fotoğrafını Değiştir",
+    "profile_take_photo": "Yeni Fotoğraf Çek",
+    "profile_choose_from_gallery": "Galeriden Seç"
 }

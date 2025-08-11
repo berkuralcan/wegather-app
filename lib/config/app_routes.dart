@@ -6,6 +6,7 @@ import '../auth_widgets/login_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/profile_screen.dart';
 import '../providers/auth_providers.dart';
+import '../samples/liquid_screen.dart';
 
 class AppRouter {
   static GoRouter createRouter(WidgetRef ref) {
@@ -48,6 +49,11 @@ class AppRouter {
             final profileId = state.pathParameters['profileId']!;
             return ProfileScreen(profileId: profileId);
           },
+        ),
+        GoRoute(
+          path: '/liquid',
+          name: 'liquid',
+          builder: (context, state) => const LiquidScreen(),
         ),
       ],
     );

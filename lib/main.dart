@@ -46,10 +46,10 @@ class MyApp extends ConsumerWidget {
         return Stack(
           children: [
             Positioned.fill(
-              child: Image.asset(
-                AppConfig.backgroundImage, 
-                fit: BoxFit.cover, 
-                cacheWidth: (MediaQuery.of(context).size.width * MediaQuery.of(context).devicePixelRatio).toInt()
+              child: Container(
+                decoration: const BoxDecoration(
+                  gradient: AppConfig.appBackgroundGradient,
+                ),
               ),
             ),
             child!,

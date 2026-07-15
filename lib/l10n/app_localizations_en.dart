@@ -33,7 +33,46 @@ class AppLocalizationsEn extends AppLocalizations {
   String get login_networkError => 'Network error. Please try again later.';
 
   @override
+  String get menu_home => 'Home';
+
+  @override
+  String get menu_calendar => 'Calendar';
+
+  @override
+  String get menu_modules => 'Modules';
+
+  @override
+  String get menu_user => 'Profile';
+
+  @override
   String get homeIcon_my_profile => 'My Profile';
+
+  @override
+  String get homeIcon_information => 'Important Information';
+
+  @override
+  String get homeIcon_rules => 'Event Rules';
+
+  @override
+  String get homeIcon_hotel => 'Accommodation';
+
+  @override
+  String get homeIcon_flights => 'Flights';
+
+  @override
+  String get homeIcon_gallery => 'Gallery';
+
+  @override
+  String get homeIcon_security => 'Security';
+
+  @override
+  String get homeIcon_shake_to_win => 'Shake to Win';
+
+  @override
+  String get homeIcon_contests => 'Contest';
+
+  @override
+  String get homeIcon_contact => 'Contact';
 
   @override
   String get homeIcon_my_qr_code => 'My QR Code';
@@ -70,4 +109,47 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profile_choose_from_gallery => 'Choose from Gallery';
+
+  @override
+  String get login_forgotPassword => 'Forgot Password?';
+
+  @override
+  String get login_terms_prefix => 'You agree to ';
+
+  @override
+  String get login_terms_link => 'Terms and Services';
+
+  @override
+  String get login_terms_suffix => ' by signing in.';
+
+  @override
+  String get resetPassword_title => 'Reset Password';
+
+  @override
+  String get resetPassword_description =>
+      'Enter your email address and we\'ll send you a link to reset your password.';
+
+  @override
+  String get resetPassword_send => 'Send Reset Link';
+
+  @override
+  String get resetPassword_success =>
+      'A password reset link has been sent to your email.';
+
+  @override
+  String get resetPassword_userNotFound =>
+      'No account found with this email address.';
+
+  @override
+  String get resetPassword_invalidEmail => 'Invalid email address.';
+
+  @override
+  String get resetPassword_emptyEmail => 'Please enter your email address.';
+
+  @override
+  String get resetPassword_genericError =>
+      'Something went wrong. Please try again.';
+
+  @override
+  String get terms_title => 'Terms and Services';
 }

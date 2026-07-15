@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wegather_app/containers/circular_liquid_button.dart';
 import 'package:wegather_app/functions/global_functions.dart';
 
 Widget buildSocialMediaButtons(dynamic socialMedia) {
@@ -46,7 +45,7 @@ Widget buildSocialMediaButtons(dynamic socialMedia) {
 
     if (value != null && value.isNotEmpty) {
       buttons.add(
-        CircularLiquidButton(
+        GestureDetector(
           onTap: () {
             navigateToSocialMedia(config['platform']! as String, value);
           },

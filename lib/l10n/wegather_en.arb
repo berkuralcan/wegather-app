@@ -32,7 +32,20 @@
     "@login_networkError": {
         "description": "The error message for network error"
     },
+    "menu_home": "Home",
+    "menu_calendar": "Calendar",
+    "menu_modules": "Modules",
+    "menu_user": "Profile",
     "homeIcon_my_profile": "My Profile",
+    "homeIcon_information": "Important Information",
+    "homeIcon_rules": "Event Rules",
+    "homeIcon_hotel": "Accommodation",
+    "homeIcon_flights": "Flights",
+    "homeIcon_gallery": "Gallery",
+    "homeIcon_security": "Security",
+    "homeIcon_shake_to_win": "Shake to Win",
+    "homeIcon_contests": "Contest",
+    "homeIcon_contact": "Contact",
     "homeIcon_my_qr_code": "My QR Code",
     "homeIcon_event_program": "Event Program",
     "homeIcon_flight_info": "Flight Info",
@@ -44,5 +57,57 @@
     "profile_title": "Profile",
     "profile_change_profile_photo": "Change Profile Photo",
     "profile_take_photo": "Take a New Photo",
-    "profile_choose_from_gallery": "Choose from Gallery"
+    "profile_choose_from_gallery": "Choose from Gallery",
+    "login_forgotPassword": "Forgot Password?",
+    "@login_forgotPassword": {
+        "description": "The forgot password link on the login screen"
+    },
+    "login_terms_prefix": "You agree to ",
+    "@login_terms_prefix": {
+        "description": "The text before the Terms and Services link on the login screen"
+    },
+    "login_terms_link": "Terms and Services",
+    "@login_terms_link": {
+        "description": "The Terms and Services link on the login screen"
+    },
+    "login_terms_suffix": " by signing in.",
+    "@login_terms_suffix": {
+        "description": "The text after the Terms and Services link on the login screen"
+    },
+    "resetPassword_title": "Reset Password",
+    "@resetPassword_title": {
+        "description": "The title of the reset password screen"
+    },
+    "resetPassword_description": "Enter your email address and we'll send you a link to reset your password.",
+    "@resetPassword_description": {
+        "description": "The description on the reset password screen"
+    },
+    "resetPassword_send": "Send Reset Link",
+    "@resetPassword_send": {
+        "description": "The label of the send reset link button"
+    },
+    "resetPassword_success": "A password reset link has been sent to your email.",
+    "@resetPassword_success": {
+        "description": "The success message after a reset email is sent"
+    },
+    "resetPassword_userNotFound": "No account found with this email address.",
+    "@resetPassword_userNotFound": {
+        "description": "The error message when no account exists for the email"
+    },
+    "resetPassword_invalidEmail": "Invalid email address.",
+    "@resetPassword_invalidEmail": {
+        "description": "The error message for an invalid email address"
+    },
+    "resetPassword_emptyEmail": "Please enter your email address.",
+    "@resetPassword_emptyEmail": {
+        "description": "The error message when the email field is empty"
+    },
+    "resetPassword_genericError": "Something went wrong. Please try again.",
+    "@resetPassword_genericError": {
+        "description": "A generic error message for the reset password screen"
+    },
+    "terms_title": "Terms and Services",
+    "@terms_title": {
+        "description": "The title of the terms and services screen"
+    }
 }

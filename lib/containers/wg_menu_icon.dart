@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wegather_app/containers/liquid_container.dart';
+import 'package:wegather_app/config/app_config.dart';
 import 'package:wegather_app/config/text_styles.dart';
 
 class WgMenuIcon extends StatelessWidget {
-
   final String iconPath;
   final String title;
   final VoidCallback onTap;
@@ -20,20 +19,27 @@ class WgMenuIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: LiquidContainer(
-        child: Column(
-          children: [
-            Spacer(),
-            SizedBox(
-              width: 55,
-              height: 55,
-              child: Center(child: Image.asset(iconPath, width: iconSize.width, height: iconSize.height))
+      child: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(100),
+              gradient: AppConfig.menuIconBackgroundColor,
             ),
-            SizedBox(height: 5),
-            Text(title, style: AppTextStyles.menuIconTextStyle),
-            Spacer(),
-          ],
-        ),
+            padding: EdgeInsets.all(16),
+            child: Image.asset(
+              iconPath,
+              width: 28,
+              height: 28,
+            ),
+          ),
+          SizedBox(height: 8),
+          Text(title, style: AppTextStyles.menuIconTextStyle),
+        ],
       ),
     );
   }

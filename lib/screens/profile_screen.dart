@@ -6,14 +6,12 @@ import '../layouts/wegather_appbar.dart';
 import 'package:wegather_app/l10n/app_localizations.dart';
 import 'package:wegather_app/config/text_styles.dart';
 import 'package:wegather_app/profile_widgets/social_media.dart';
-import 'package:wegather_app/containers/liquid_button.dart';
 import 'package:wegather_app/profile_widgets/profile_information.dart';
 import 'package:wegather_app/profile_widgets/tagged_photos.dart';
 import 'package:wegather_app/profile_widgets/shared_photos.dart';
 import 'package:wegather_app/reusableWidgets/liquid_snackbar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-import 'package:wegather_app/containers/liquid_container.dart';
 
 class ProfileScreen extends StatefulWidget {
   final String profileId;
@@ -67,7 +65,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: LiquidContainer(
+            child: Container(
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -309,10 +307,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               spacing: 10,
               children: [
                 Expanded(
-                  child: LiquidButton(
-                    isActive: selectedIndex == 0,
-                    padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
-                    onTap: () {
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
+                      backgroundColor: selectedIndex == 0
+                          ? Theme.of(context).colorScheme.primary
+                          : null,
+                    ),
+                    onPressed: () {
                       onTapProfileDisplayButton(0);
                     },
                     child: Text(
@@ -323,10 +325,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 Expanded(
-                  child: LiquidButton(
-                    isActive: selectedIndex == 1,
-                    padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
-                    onTap: () {
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
+                      backgroundColor: selectedIndex == 1
+                          ? Theme.of(context).colorScheme.primary
+                          : null,
+                    ),
+                    onPressed: () {
                       onTapProfileDisplayButton(1);
                     },
                     child: Text(
@@ -337,10 +343,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 Expanded(
-                  child: LiquidButton(
-                    isActive: selectedIndex == 2,
-                    padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
-                    onTap: () {
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.fromLTRB(2, 11, 2, 11),
+                      backgroundColor: selectedIndex == 2
+                          ? Theme.of(context).colorScheme.primary
+                          : null,
+                    ),
+                    onPressed: () {
                       onTapProfileDisplayButton(2);
                     },
                     child: Text(

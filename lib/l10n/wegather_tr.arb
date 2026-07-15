@@ -32,7 +32,20 @@
     "@login_networkError": {
         "description": "Ağ hatası oluştu mesajı"
     },
+    "menu_home": "Ana Sayfa",
+    "menu_calendar": "Takvim",
+    "menu_modules": "Modüller",
+    "menu_user": "Profil",
     "homeIcon_my_profile": "Profilim",
+    "homeIcon_information": "Önemli Bilgiler",
+    "homeIcon_rules": "Etkinlik Kuralları",
+    "homeIcon_hotel": "Konaklama",
+    "homeIcon_flights": "Uçuşlar",
+    "homeIcon_gallery": "Galeri",
+    "homeIcon_security": "Güvenlik",
+    "homeIcon_shake_to_win": "Salla Kazan",
+    "homeIcon_contests": "Çekilişler",
+    "homeIcon_contact": "İletişim",
     "homeIcon_my_qr_code": "QR Kodum",
     "homeIcon_event_program": "Etkinlik Programı",
     "homeIcon_flight_info": "Uçuş Bilgilerim",
@@ -44,5 +57,57 @@
     "profile_title": "Profil",
     "profile_change_profile_photo": "Profil Fotoğrafını Değiştir",
     "profile_take_photo": "Yeni Fotoğraf Çek",
-    "profile_choose_from_gallery": "Galeriden Seç"
+    "profile_choose_from_gallery": "Galeriden Seç",
+    "login_forgotPassword": "Şifremi Unuttum?",
+    "@login_forgotPassword": {
+        "description": "The forgot password link on the login screen"
+    },
+    "login_terms_prefix": "Giriş yaparak ",
+    "@login_terms_prefix": {
+        "description": "The text before the Terms and Services link on the login screen"
+    },
+    "login_terms_link": "Kullanım Koşulları'nı",
+    "@login_terms_link": {
+        "description": "The Terms and Services link on the login screen"
+    },
+    "login_terms_suffix": " kabul etmiş olursunuz.",
+    "@login_terms_suffix": {
+        "description": "The text after the Terms and Services link on the login screen"
+    },
+    "resetPassword_title": "Şifreyi Sıfırla",
+    "@resetPassword_title": {
+        "description": "The title of the reset password screen"
+    },
+    "resetPassword_description": "E-posta adresinizi girin, şifrenizi sıfırlamanız için size bir bağlantı gönderelim.",
+    "@resetPassword_description": {
+        "description": "The description on the reset password screen"
+    },
+    "resetPassword_send": "Sıfırlama Bağlantısı Gönder",
+    "@resetPassword_send": {
+        "description": "The label of the send reset link button"
+    },
+    "resetPassword_success": "Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.",
+    "@resetPassword_success": {
+        "description": "The success message after a reset email is sent"
+    },
+    "resetPassword_userNotFound": "Bu e-posta adresiyle bir hesap bulunamadı.",
+    "@resetPassword_userNotFound": {
+        "description": "The error message when no account exists for the email"
+    },
+    "resetPassword_invalidEmail": "Geçersiz e-posta adresi.",
+    "@resetPassword_invalidEmail": {
+        "description": "The error message for an invalid email address"
+    },
+    "resetPassword_emptyEmail": "Lütfen e-posta adresinizi girin.",
+    "@resetPassword_emptyEmail": {
+        "description": "The error message when the email field is empty"
+    },
+    "resetPassword_genericError": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "@resetPassword_genericError": {
+        "description": "A generic error message for the reset password screen"
+    },
+    "terms_title": "Kullanım Koşulları",
+    "@terms_title": {
+        "description": "The title of the terms and services screen"
+    }
 }

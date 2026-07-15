@@ -15,78 +15,118 @@ class HomeScreen extends ConsumerWidget {
 
     final List<Map<String, dynamic>> menuItems = [
       {
-        "iconPath": "assets/icons/profile.png",
-        "title": AppLocalizations.of(context)!.homeIcon_my_profile,
+        "iconPath": "assets/icons/default/modules/announcements.png",
+        "title": AppLocalizations.of(context)!.homeIcon_announcements,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
             context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
-        "iconPath": "assets/icons/qr.png",
-        "title": AppLocalizations.of(context)!.homeIcon_my_qr_code,
-        "iconSize": Size(50.42, 50.42),
+        "iconPath": "assets/icons/default/modules/information.png",
+        "title": AppLocalizations.of(context)!.homeIcon_information,
+        "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/liquid');
+            context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
-        "iconPath": "assets/icons/calendar-2.png",
-        "title": AppLocalizations.of(context)!.homeIcon_event_program,
-        "iconSize": Size(36.67, 41.25),
-        "onTap": () {},
+        "iconPath": "assets/icons/default/modules/rules.png",
+        "title": AppLocalizations.of(context)!.homeIcon_rules,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/plane.png",
-        "title": AppLocalizations.of(context)!.homeIcon_flight_info,
-        "iconSize": Size(39.1, 39.08),
-        "onTap": () {},
+        "iconPath": "assets/icons/default/modules/hotel.png",
+        "title": AppLocalizations.of(context)!.homeIcon_hotel,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/transport.png",
+        "iconPath": "assets/icons/default/modules/flights.png",
+        "title": AppLocalizations.of(context)!.homeIcon_flights,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
+      },
+      {
+        "iconPath": "assets/icons/default/modules/transportation.png",
         "title": AppLocalizations.of(context)!.homeIcon_transportation,
-        "iconSize": Size(36.67, 43.54),
-        "onTap": () {},
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/stay.png",
-        "title": AppLocalizations.of(context)!.homeIcon_stay_info,
-        "iconSize": Size(50.42, 34.38),
-        "onTap": () {},
+        "iconPath": "assets/icons/default/modules/gallery.png",
+        "title": AppLocalizations.of(context)!.homeIcon_gallery,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/documents.png",
+        "iconPath": "assets/icons/default/modules/documents.png",
         "title": AppLocalizations.of(context)!.homeIcon_documents,
-        "iconSize": Size(36.67, 45.83),
-        "onTap": () {},
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/bell.png",
-        "title": AppLocalizations.of(context)!.homeIcon_announcements,
-        "iconSize": Size(40.97, 49.99),
-        "onTap": () {},
+        "iconPath": "assets/icons/default/modules/security.png",
+        "title": AppLocalizations.of(context)!.homeIcon_security,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
       {
-        "iconPath": "assets/icons/support.png",
-        "title": AppLocalizations.of(context)!.homeIcon_support,
-        "iconSize": Size(39.29, 47.14),
-        "onTap": () {},
+        "iconPath": "assets/icons/default/modules/shake-to-win.png",
+        "title": AppLocalizations.of(context)!.homeIcon_shake_to_win,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
       },
+      {
+        "iconPath": "assets/icons/default/modules/contests.png",
+        "title": AppLocalizations.of(context)!.homeIcon_contests,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
+      },
+      {
+        "iconPath": "assets/icons/default/modules/contact.png",
+        "title": AppLocalizations.of(context)!.homeIcon_contact,
+        "iconSize": Size(41.25, 41.25),
+        "onTap": () {
+            context.push('/profile/${user?.uid ?? 'test-id'}');
+        },
+      },
+    
+     
     ];
 
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 92),
+          SizedBox(height: 65),
           Image.asset(AppConfig.appLogo),
-          SizedBox(height: 100),
+          SizedBox(height: 48),
           Expanded(
             child: GridView.count(
               physics: NeverScrollableScrollPhysics(), // TODO - Remove this when we have more items.
               crossAxisCount: 3,
               crossAxisSpacing: 17,
               mainAxisSpacing: 18,
-              padding: EdgeInsets.only(left: 12, right: 12),
+              padding: EdgeInsets.only(left: 53.17, right: 53.17),
               shrinkWrap: true,
               children: menuItems
                   .map(

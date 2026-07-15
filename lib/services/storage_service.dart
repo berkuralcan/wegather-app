@@ -31,7 +31,7 @@ class StorageService {
       }
       
       final int fileSize = await imageFile.length();
-      print('✅ StorageService: Image file exists - Size: ${fileSize} bytes, Path: ${imageFile.path}');
+      print('✅ StorageService: Image file exists - Size: $fileSize bytes, Path: ${imageFile.path}');
 
       // Create the file path based on the required structure
       final String filePath = _buildProfileImagePath(currentUser.uid);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../containers/liquid_container.dart';
 import '../config/text_styles.dart';
 
 /// A custom SnackBar widget with LiquidContainer styling
@@ -19,7 +18,7 @@ class LiquidSnackBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-      child: LiquidContainer(
+      child: Container(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
           child: Row(

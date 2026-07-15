@@ -146,11 +146,89 @@ abstract class AppLocalizations {
   /// **'Network error. Please try again later.'**
   String get login_networkError;
 
+  /// No description provided for @menu_home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get menu_home;
+
+  /// No description provided for @menu_calendar.
+  ///
+  /// In en, this message translates to:
+  /// **'Calendar'**
+  String get menu_calendar;
+
+  /// No description provided for @menu_modules.
+  ///
+  /// In en, this message translates to:
+  /// **'Modules'**
+  String get menu_modules;
+
+  /// No description provided for @menu_user.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get menu_user;
+
   /// No description provided for @homeIcon_my_profile.
   ///
   /// In en, this message translates to:
   /// **'My Profile'**
   String get homeIcon_my_profile;
+
+  /// No description provided for @homeIcon_information.
+  ///
+  /// In en, this message translates to:
+  /// **'Important Information'**
+  String get homeIcon_information;
+
+  /// No description provided for @homeIcon_rules.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Rules'**
+  String get homeIcon_rules;
+
+  /// No description provided for @homeIcon_hotel.
+  ///
+  /// In en, this message translates to:
+  /// **'Accommodation'**
+  String get homeIcon_hotel;
+
+  /// No description provided for @homeIcon_flights.
+  ///
+  /// In en, this message translates to:
+  /// **'Flights'**
+  String get homeIcon_flights;
+
+  /// No description provided for @homeIcon_gallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Gallery'**
+  String get homeIcon_gallery;
+
+  /// No description provided for @homeIcon_security.
+  ///
+  /// In en, this message translates to:
+  /// **'Security'**
+  String get homeIcon_security;
+
+  /// No description provided for @homeIcon_shake_to_win.
+  ///
+  /// In en, this message translates to:
+  /// **'Shake to Win'**
+  String get homeIcon_shake_to_win;
+
+  /// No description provided for @homeIcon_contests.
+  ///
+  /// In en, this message translates to:
+  /// **'Contest'**
+  String get homeIcon_contests;
+
+  /// No description provided for @homeIcon_contact.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact'**
+  String get homeIcon_contact;
 
   /// No description provided for @homeIcon_my_qr_code.
   ///
@@ -223,6 +301,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Choose from Gallery'**
   String get profile_choose_from_gallery;
+
+  /// The forgot password link on the login screen
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password?'**
+  String get login_forgotPassword;
+
+  /// The text before the Terms and Services link on the login screen
+  ///
+  /// In en, this message translates to:
+  /// **'You agree to '**
+  String get login_terms_prefix;
+
+  /// The Terms and Services link on the login screen
+  ///
+  /// In en, this message translates to:
+  /// **'Terms and Services'**
+  String get login_terms_link;
+
+  /// The text after the Terms and Services link on the login screen
+  ///
+  /// In en, this message translates to:
+  /// **' by signing in.'**
+  String get login_terms_suffix;
+
+  /// The title of the reset password screen
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Password'**
+  String get resetPassword_title;
+
+  /// The description on the reset password screen
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email address and we\'ll send you a link to reset your password.'**
+  String get resetPassword_description;
+
+  /// The label of the send reset link button
+  ///
+  /// In en, this message translates to:
+  /// **'Send Reset Link'**
+  String get resetPassword_send;
+
+  /// The success message after a reset email is sent
+  ///
+  /// In en, this message translates to:
+  /// **'A password reset link has been sent to your email.'**
+  String get resetPassword_success;
+
+  /// The error message when no account exists for the email
+  ///
+  /// In en, this message translates to:
+  /// **'No account found with this email address.'**
+  String get resetPassword_userNotFound;
+
+  /// The error message for an invalid email address
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email address.'**
+  String get resetPassword_invalidEmail;
+
+  /// The error message when the email field is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your email address.'**
+  String get resetPassword_emptyEmail;
+
+  /// A generic error message for the reset password screen
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again.'**
+  String get resetPassword_genericError;
+
+  /// The title of the terms and services screen
+  ///
+  /// In en, this message translates to:
+  /// **'Terms and Services'**
+  String get terms_title;
 }
 
 class _AppLocalizationsDelegate

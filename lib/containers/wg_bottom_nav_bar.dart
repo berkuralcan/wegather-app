@@ -27,10 +27,7 @@ class WgBottomNavBar extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         boxShadow: [
-          BoxShadow(
-            color: Color(0x0D000000),
-            blurRadius: 11.100000381469727,
-          ),
+          BoxShadow(color: Color(0x0D000000), blurRadius: 11.100000381469727),
         ],
         color: Color(0x660034A1),
         borderRadius: BorderRadius.only(
@@ -72,26 +69,19 @@ class _NavItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeOutCubic,
-        padding: EdgeInsets.symmetric(
-          horizontal: 8,
-          vertical: 8
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           gradient: selected ? AppConfig.menuIconBackgroundColor : null,
-          boxShadow: selected ? [
-            BoxShadow(
-              color: Color(0xFF6B8FD3),
-              blurRadius: 2.1
-            ),
-          ] : null,
+          boxShadow: selected
+              ? [BoxShadow(color: Color(0xFF6B8FD3), blurRadius: 2.1)]
+              : null,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -100,7 +90,12 @@ class _NavItem extends StatelessWidget {
               item.iconPath,
               width: 22,
               height: 22,
-              colorFilter: ColorFilter.mode(AppConfig.menuIconColor, BlendMode.srcIn),
+              colorFilter: selected
+                  ? ColorFilter.mode(
+                      AppConfig.lightIconColor,
+                      BlendMode.srcATop,
+                    )
+                  : ColorFilter.mode(AppConfig.menuIconColor, BlendMode.srcIn),
             ),
             AnimatedSize(
               duration: const Duration(milliseconds: 250),

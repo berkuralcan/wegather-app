@@ -31,11 +31,7 @@ class WgMenuIcon extends StatelessWidget {
               gradient: AppConfig.menuIconBackgroundColor,
             ),
             padding: EdgeInsets.all(16),
-            child: Image.asset(
-              iconPath,
-              width: 28,
-              height: 28,
-            ),
+            child: Image.asset(iconPath, width: 28, height: 28),
           ),
           SizedBox(height: 8),
           Text(title, style: AppTextStyles.menuIconTextStyle),

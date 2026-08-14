@@ -23,8 +23,6 @@ class ProfileService {
     return profiles;
   }
 
-
-
   // Validate profile data before saving
   bool validateProfile(ProfileModel profile) {
     if (profile.name.trim().isEmpty) return false;
@@ -40,7 +38,7 @@ class ProfileService {
 
   // Format profile for display (example of business logic)
   String getDisplayName(ProfileModel profile) {
-    return profile.title.isNotEmpty 
+    return profile.title.isNotEmpty
         ? '${profile.name} - ${profile.title}'
         : profile.name;
   }
@@ -48,10 +46,10 @@ class ProfileService {
   // Check if profile has social media (business logic)
   bool hasSocialMedia(ProfileModel profile) {
     final social = profile.socialMedia;
-    return social.instagram != null || 
-           social.facebook != null || 
-           social.twitter != null || 
-           social.linkedIn != null;
+    return social.instagram != null ||
+        social.facebook != null ||
+        social.twitter != null ||
+        social.linkedIn != null;
   }
 
   /// Uploads a profile image and updates the user's profile document
@@ -66,10 +64,10 @@ class ProfileService {
     try {
       // Upload the image to Firebase Storage
       final imageUrl = await _profileRepository.uploadProfileImage(imageFile);
-      
+
       // Update the user's profile document with the new image URL
       await _profileRepository.updateProfileImage(currentUser.uid, imageUrl);
-      
+
       return imageUrl;
     } catch (e) {
       throw Exception('Failed to upload and update profile image: $e');
@@ -94,13 +92,15 @@ class ProfileService {
 
     try {
       // Delete from storage
-      final deleted = await _profileRepository.deleteProfileImage(currentUser.uid);
-      
+      final deleted = await _profileRepository.deleteProfileImage(
+        currentUser.uid,
+      );
+
       if (deleted) {
         // Update profile document to remove image URL
         await _profileRepository.updateProfileImage(currentUser.uid, '');
       }
-      
+
       return deleted;
     } catch (e) {
       throw Exception('Failed to delete profile image: $e');

@@ -65,5 +65,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'wegather-44378.firebasestorage.app',
     iosBundleId: 'com.example.wegatherApp',
   );
-
 }

@@ -19,7 +19,8 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_announcements,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The event's announcements, managed from the admin panel.
+          context.push('/announcements');
         },
       },
       {
@@ -27,7 +28,8 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_information,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The event's "Important Tips", managed from the admin panel.
+          context.push('/tips');
         },
       },
       {
@@ -35,7 +37,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_rules,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -43,7 +45,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_hotel,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -51,7 +53,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_flights,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -59,7 +61,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_transportation,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -67,7 +69,8 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_gallery,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The event's shared gallery — the one module attendees add to.
+          context.push('/gallery');
         },
       },
       {
@@ -75,7 +78,8 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_documents,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The event's documents, managed from the admin panel.
+          context.push('/documents');
         },
       },
       {
@@ -83,7 +87,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_security,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -91,7 +95,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_shake_to_win,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -99,7 +103,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_contests,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -107,11 +111,9 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_contact,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-            context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/profile/${user?.uid ?? 'test-id'}');
         },
       },
-    
-     
     ];
 
     return Scaffold(
@@ -122,7 +124,8 @@ class HomeScreen extends ConsumerWidget {
           SizedBox(height: 48),
           Expanded(
             child: GridView.count(
-              physics: NeverScrollableScrollPhysics(), // TODO - Remove this when we have more items.
+              physics:
+                  NeverScrollableScrollPhysics(), // TODO - Remove this when we have more items.
               crossAxisCount: 3,
               crossAxisSpacing: 17,
               mainAxisSpacing: 18,

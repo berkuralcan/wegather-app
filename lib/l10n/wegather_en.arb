@@ -58,6 +58,18 @@
     "profile_change_profile_photo": "Change Profile Photo",
     "profile_take_photo": "Take a New Photo",
     "profile_choose_from_gallery": "Choose from Gallery",
+    "profile_tabAbout": "About",
+    "@profile_tabAbout": {
+        "description": "The label of the tab that shows the user's own details on the profile screen"
+    },
+    "profile_tabPosts": "Posts",
+    "@profile_tabPosts": {
+        "description": "The label of the tab that shows the user's posts on the profile screen"
+    },
+    "profile_postsEmpty": "Nothing has been posted yet.",
+    "@profile_postsEmpty": {
+        "description": "Shown on the profile screen's Posts tab while the user has no posts"
+    },
     "login_forgotPassword": "Forgot Password?",
     "@login_forgotPassword": {
         "description": "The forgot password link on the login screen"
@@ -109,5 +121,419 @@
     "terms_title": "Terms and Services",
     "@terms_title": {
         "description": "The title of the terms and services screen"
+    },
+    "common_retry": "Try Again",
+    "@common_retry": {
+        "description": "The label of the retry button on error states"
+    },
+    "common_logout": "Log Out",
+    "@common_logout": {
+        "description": "The label of the log out button"
+    },
+    "events_title": "Select Event",
+    "@events_title": {
+        "description": "The title of the event selection screen"
+    },
+    "events_noAccess": "You don't have access to any events yet. Please contact your event organizer.",
+    "@events_noAccess": {
+        "description": "Shown on the event selection screen when the user has no accessible events"
+    },
+    "events_loadError": "Your events couldn't be loaded. Please check your connection and try again.",
+    "@events_loadError": {
+        "description": "Shown when loading the user's events fails"
+    },
+    "tips_title": "Important Information",
+    "@tips_title": {
+        "description": "The title of the important tips screen"
+    },
+    "tips_empty": "No information has been added for this event yet.",
+    "@tips_empty": {
+        "description": "Shown when the selected event has no tips"
+    },
+    "tips_loadError": "This information couldn't be loaded. Please try again.",
+    "@tips_loadError": {
+        "description": "Shown when loading the event's tips fails"
+    },
+    "announcements_title": "Announcements",
+    "@announcements_title": {
+        "description": "The title of the announcements screen"
+    },
+    "announcements_empty": "No announcements have been posted for this event yet.",
+    "@announcements_empty": {
+        "description": "Shown when the selected event has no announcements"
+    },
+    "announcements_loadError": "Announcements couldn't be loaded. Please try again.",
+    "@announcements_loadError": {
+        "description": "Shown when loading the event's announcements fails"
+    },
+    "announcement_openLink": "Open link",
+    "@announcement_openLink": {
+        "description": "Button on an announcement that opens its link in the browser"
+    },
+    "documents_title": "Documents",
+    "@documents_title": {
+        "description": "The title of the documents screen"
+    },
+    "documents_empty": "No documents have been shared for this event yet.",
+    "@documents_empty": {
+        "description": "Shown when the selected event has no documents"
+    },
+    "documents_loadError": "Documents couldn't be loaded. Please try again.",
+    "@documents_loadError": {
+        "description": "Shown when loading the event's documents fails"
+    },
+    "document_open": "Open document",
+    "@document_open": {
+        "description": "Button on a document that opens the file"
+    },
+    "schedule_title": "Event Schedule",
+    "@schedule_title": {
+        "description": "The header of the calendar screen (the bottom nav label is menu_calendar)"
+    },
+    "schedule_empty": "No activities have been scheduled for this event yet.",
+    "@schedule_empty": {
+        "description": "Shown on the calendar screen when the event has no activities at all"
+    },
+    "schedule_emptyDay": "Nothing is scheduled for this day.",
+    "@schedule_emptyDay": {
+        "description": "Shown on the calendar screen when the selected day has no activities"
+    },
+    "schedule_loadError": "The schedule couldn't be loaded. Please try again.",
+    "@schedule_loadError": {
+        "description": "Shown when loading the event's schedule fails"
+    },
+    "activity_title": "Event Details",
+    "@activity_title": {
+        "description": "The title of the activity detail screen"
+    },
+    "activity_about": "About",
+    "@activity_about": {
+        "description": "The heading above an activity's description on its detail screen"
+    },
+    "activity_participants": "Participants",
+    "@activity_participants": {
+        "description": "The heading of the participants box on the activity detail screen"
+    },
+    "activity_notFound": "This activity is no longer part of the schedule.",
+    "@activity_notFound": {
+        "description": "Shown on the activity detail screen when the activity isn't in the loaded schedule"
+    },
+    "participant_title": "Participant Details",
+    "@participant_title": {
+        "description": "The title of the participant detail screen"
+    },
+    "participant_about": "About",
+    "@participant_about": {
+        "description": "The heading above a participant's bio on their detail screen"
+    },
+    "participant_notFound": "This participant is no longer part of this activity.",
+    "@participant_notFound": {
+        "description": "Shown on the participant detail screen when the participant isn't in the activity's roster"
+    },
+    "participant_tabAbout": "About",
+    "@participant_tabAbout": {
+        "description": "The label of the tab that shows a participant's own details on their detail screen"
+    },
+    "participant_tabEvent": "Event",
+    "@participant_tabEvent": {
+        "description": "The label of the tab that shows a participant's part in the event on their detail screen"
+    },
+    "participant_eventSchedule": "Event Schedule",
+    "@participant_eventSchedule": {
+        "description": "The heading of the box listing the activities a participant takes part in, on the Event tab of their detail screen"
+    },
+    "participant_noActivities": "This participant isn't taking part in any activity yet.",
+    "@participant_noActivities": {
+        "description": "Shown in place of a participant's schedule when they are assigned to no activity at all"
+    },
+    "participant_otherSpeakers": "Explore Other Speakers",
+    "@participant_otherSpeakers": {
+        "description": "The heading of the box listing the event's other roster members, on the Event tab of a participant's detail screen"
+    },
+    "participant_noOtherSpeakers": "Nobody else has been added to this event yet.",
+    "@participant_noOtherSpeakers": {
+        "description": "Shown in place of the other speakers when the participant is the event's only roster member"
+    },
+    "gallery_title": "Gallery",
+    "@gallery_title": {
+        "description": "The title of the event gallery screen"
+    },
+    "gallery_tabPhotos": "Photos",
+    "@gallery_tabPhotos": {
+        "description": "The label of the pill selector tab showing the gallery's photos"
+    },
+    "gallery_tabVideos": "Videos",
+    "@gallery_tabVideos": {
+        "description": "The label of the pill selector tab showing the gallery's videos"
+    },
+    "gallery_emptyPhotos": "No photos have been shared yet. Be the first to add one.",
+    "@gallery_emptyPhotos": {
+        "description": "Shown when the gallery's Photos tab has nothing in it"
+    },
+    "gallery_emptyVideos": "No videos have been shared yet. Be the first to add one.",
+    "@gallery_emptyVideos": {
+        "description": "Shown when the gallery's Videos tab has nothing in it"
+    },
+    "gallery_loadError": "The gallery couldn't be loaded. Please try again.",
+    "@gallery_loadError": {
+        "description": "Shown when loading the event gallery fails"
+    },
+    "gallery_add": "Add New",
+    "@gallery_add": {
+        "description": "The label of the button that adds media to the gallery"
+    },
+    "gallery_uploading": "Uploading…",
+    "@gallery_uploading": {
+        "description": "Shown while a picked photo or video is being uploaded to the gallery"
+    },
+    "gallery_uploadSuccess": "Added to the gallery.",
+    "@gallery_uploadSuccess": {
+        "description": "Shown when an upload to the gallery finishes"
+    },
+    "gallery_uploadError": "Your upload couldn't be completed. Please try again.",
+    "@gallery_uploadError": {
+        "description": "Shown when an upload to the gallery fails"
+    },
+    "gallery_back": "Back to the gallery",
+    "@gallery_back": {
+        "description": "The label of the back button over a photo or video in the gallery viewer"
+    },
+    "gallery_share": "Share",
+    "@gallery_share": {
+        "description": "The label of the share button over a photo or video in the gallery viewer"
+    },
+    "gallery_report": "Report",
+    "@gallery_report": {
+        "description": "The label of the report button over a photo or video in the gallery viewer"
+    },
+    "gallery_shareError": "This couldn't be shared. Please try again.",
+    "@gallery_shareError": {
+        "description": "Shown when preparing a photo or video for the share sheet fails"
+    },
+    "gallery_reportTitle": "Are you sure you want to report this media?",
+    "@gallery_reportTitle": {
+        "description": "The heading of the sheet that confirms reporting a photo or video"
+    },
+    "gallery_reportDescription": "The event team will review it. You can add a note about what's wrong with it.",
+    "@gallery_reportDescription": {
+        "description": "The explanation under the heading of the report sheet"
+    },
+    "gallery_reportReasonHint": "Why are you reporting this? (optional)",
+    "@gallery_reportReasonHint": {
+        "description": "The placeholder of the optional note field on the report sheet"
+    },
+    "gallery_reportConfirm": "Report",
+    "@gallery_reportConfirm": {
+        "description": "The button that confirms reporting a photo or video"
+    },
+    "gallery_reportCancel": "Cancel",
+    "@gallery_reportCancel": {
+        "description": "The button that closes the report sheet without reporting"
+    },
+    "gallery_reportSuccess": "Thanks — this has been reported.",
+    "@gallery_reportSuccess": {
+        "description": "Shown when a photo or video has been reported"
+    },
+    "gallery_reportError": "This couldn't be reported. Please try again.",
+    "@gallery_reportError": {
+        "description": "Shown when reporting a photo or video fails"
+    },
+    "gallery_addTitle": "Add to the gallery",
+    "@gallery_addTitle": {
+        "description": "The heading of the sheet that asks where a photo or video should come from"
+    },
+    "gallery_addTakePhoto": "Take a photo",
+    "@gallery_addTakePhoto": {
+        "description": "The option that opens the camera to take a photo for the gallery"
+    },
+    "gallery_addRecordVideo": "Record a video",
+    "@gallery_addRecordVideo": {
+        "description": "The option that opens the camera to record a video for the gallery"
+    },
+    "gallery_addChooseExisting": "Choose from your gallery",
+    "@gallery_addChooseExisting": {
+        "description": "The option that opens the device's library to pick a photo or video for the gallery"
+    },
+    "gallery_addCancel": "Cancel",
+    "@gallery_addCancel": {
+        "description": "The button that closes the add sheet without adding anything"
+    },
+    "landing_greeting": "Hi, {name}",
+    "@landing_greeting": {
+        "description": "The greeting at the top of the landing (home) screen, with the user's first name",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "landing_readNow": "Read Now",
+    "@landing_readNow": {
+        "description": "The call to action under the latest announcement on the landing screen"
+    },
+    "landing_seeAll": "See All",
+    "@landing_seeAll": {
+        "description": "The button next to a section header on the landing screen that opens that section's full list"
+    },
+    "community_title": "Community Updates",
+    "@community_title": {
+        "description": "The title of the community updates section and screen"
+    },
+    "community_empty": "No posts yet, be the first to create one!",
+    "@community_empty": {
+        "description": "Shown on the community screen when the event has no posts yet"
+    },
+    "community_createPost": "Create Post",
+    "@community_createPost": {
+        "description": "The label of the button that opens the create-post flow on the community screen"
+    },
+    "community_loadError": "The community feed couldn't be loaded. Please try again.",
+    "@community_loadError": {
+        "description": "Shown when loading the community feed fails"
+    },
+    "community_newPost": "New Post",
+    "@community_newPost": {
+        "description": "The title of the screen where a post is composed"
+    },
+    "community_post": "Post",
+    "@community_post": {
+        "description": "The button that shares the composed post to the community feed"
+    },
+    "community_captionHint": "Write a caption…",
+    "@community_captionHint": {
+        "description": "The placeholder of the caption field on the create-post screen"
+    },
+    "community_addMediaTitle": "Add to your post",
+    "@community_addMediaTitle": {
+        "description": "The heading of the sheet that asks where a post's photo or video should come from"
+    },
+    "community_addMedia": "Add photos or videos",
+    "@community_addMedia": {
+        "description": "The button on the empty create-post screen that opens the add-media sheet"
+    },
+    "community_mediaEmpty": "Take a photo or video, or choose some from your library. Pick several and they'll appear in the order you picked them.",
+    "@community_mediaEmpty": {
+        "description": "Shown on the create-post screen before any media has been chosen"
+    },
+    "community_mediaRequired": "Add at least one photo or video to post.",
+    "@community_mediaRequired": {
+        "description": "Shown when the post button is used before any media has been chosen"
+    },
+    "community_mediaLimit": "A post holds up to {count} photos and videos.",
+    "@community_mediaLimit": {
+        "description": "Shown when the user picks more media than one post can hold",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "community_mediaError": "That couldn't be added. Please try again.",
+    "@community_mediaError": {
+        "description": "Shown when the camera or the library picker fails on the create-post screen"
+    },
+    "community_posting": "Sharing your post…",
+    "@community_posting": {
+        "description": "Shown while a composed post's media is uploading"
+    },
+    "community_postSuccess": "Your post has been shared.",
+    "@community_postSuccess": {
+        "description": "Shown when a post has been added to the community feed"
+    },
+    "community_postError": "Your post couldn't be shared. Please try again.",
+    "@community_postError": {
+        "description": "Shown when creating a post fails"
+    },
+    "community_postTitle": "Post",
+    "@community_postTitle": {
+        "description": "The title of the screen showing a single post and its comments"
+    },
+    "community_postMissing": "This post is no longer available.",
+    "@community_postMissing": {
+        "description": "Shown on the post screen when the post has been removed"
+    },
+    "community_comments": "Comments",
+    "@community_comments": {
+        "description": "The heading above a post's comments"
+    },
+    "community_commentsEmpty": "No comments yet. Start the conversation.",
+    "@community_commentsEmpty": {
+        "description": "Shown in place of a post's comments when it has none"
+    },
+    "community_commentsLoadError": "The comments couldn't be loaded. Please try again.",
+    "@community_commentsLoadError": {
+        "description": "Shown when loading a post's comments fails"
+    },
+    "community_commentHint": "Add a comment…",
+    "@community_commentHint": {
+        "description": "The placeholder of the comment field under a post"
+    },
+    "community_commentSend": "Send",
+    "@community_commentSend": {
+        "description": "The label of the button that posts a written comment"
+    },
+    "community_commentError": "Your comment couldn't be added. Please try again.",
+    "@community_commentError": {
+        "description": "Shown when adding a comment fails"
+    },
+    "community_likeError": "Your like couldn't be saved. Please try again.",
+    "@community_likeError": {
+        "description": "Shown when liking or unliking a post fails"
+    },
+    "community_more": "More",
+    "@community_more": {
+        "description": "The accessibility label of the ellipsis button on a community post that opens its options"
+    },
+    "community_options": "Post options",
+    "@community_options": {
+        "description": "The heading of the sheet behind a post's ellipsis"
+    },
+    "community_report": "Report post",
+    "@community_report": {
+        "description": "The option in a post's sheet that flags it for the event team"
+    },
+    "community_reportedAlready": "Already reported",
+    "@community_reportedAlready": {
+        "description": "Shown in place of the report option for a post that has already been flagged"
+    },
+    "community_cancel": "Cancel",
+    "@community_cancel": {
+        "description": "The button that closes a community sheet without doing anything"
+    },
+    "community_reportTitle": "Are you sure you want to report this post?",
+    "@community_reportTitle": {
+        "description": "The heading of the sheet that confirms reporting a post"
+    },
+    "community_reportDescription": "The event team will review it. You can add a note about what's wrong with it.",
+    "@community_reportDescription": {
+        "description": "Explains what reporting a post does"
+    },
+    "community_reportReasonHint": "Why are you reporting this? (optional)",
+    "@community_reportReasonHint": {
+        "description": "The placeholder of the optional note on the report-post sheet"
+    },
+    "community_reportConfirm": "Report",
+    "@community_reportConfirm": {
+        "description": "The button that confirms reporting a post"
+    },
+    "community_reportSuccess": "Thanks — this has been reported.",
+    "@community_reportSuccess": {
+        "description": "Shown when a post has been reported"
+    },
+    "community_reportError": "This couldn't be reported. Please try again.",
+    "@community_reportError": {
+        "description": "Shown when reporting a post fails"
+    },
+    "landing_enjoyDay": "Enjoy the {day} day of {eventName}",
+    "@landing_enjoyDay": {
+        "description": "Fallback banner text over the event's featured image when the event has no slogan. {day} is a locale-formatted day-of-event token (an English ordinal like \"2nd\"; a plain number in Turkish).",
+        "placeholders": {
+            "day": {
+                "type": "String"
+            },
+            "eventName": {
+                "type": "String"
+            }
+        }
     }
 }

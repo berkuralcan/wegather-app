@@ -112,6 +112,15 @@ class AppLocalizationsTr extends AppLocalizations {
   String get profile_choose_from_gallery => 'Galeriden Seç';
 
   @override
+  String get profile_tabAbout => 'Hakkında';
+
+  @override
+  String get profile_tabPosts => 'Gönderiler';
+
+  @override
+  String get profile_postsEmpty => 'Henüz bir gönderi paylaşılmadı.';
+
+  @override
   String get login_forgotPassword => 'Şifremi Unuttum?';
 
   @override
@@ -153,4 +162,336 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get terms_title => 'Kullanım Koşulları';
+
+  @override
+  String get common_retry => 'Tekrar Dene';
+
+  @override
+  String get common_logout => 'Çıkış Yap';
+
+  @override
+  String get events_title => 'Etkinlik Seçin';
+
+  @override
+  String get events_noAccess =>
+      'Henüz hiçbir etkinliğe erişiminiz yok. Lütfen etkinlik organizatörünüzle iletişime geçin.';
+
+  @override
+  String get events_loadError =>
+      'Etkinlikleriniz yüklenemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.';
+
+  @override
+  String get tips_title => 'Önemli Bilgiler';
+
+  @override
+  String get tips_empty => 'Bu etkinlik için henüz bilgi eklenmemiş.';
+
+  @override
+  String get tips_loadError => 'Bilgiler yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get announcements_title => 'Duyurular';
+
+  @override
+  String get announcements_empty => 'Bu etkinlik için henüz duyuru eklenmemiş.';
+
+  @override
+  String get announcements_loadError =>
+      'Duyurular yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get announcement_openLink => 'Bağlantıyı aç';
+
+  @override
+  String get documents_title => 'Dokümanlar';
+
+  @override
+  String get documents_empty => 'Bu etkinlik için henüz doküman paylaşılmamış.';
+
+  @override
+  String get documents_loadError =>
+      'Dokümanlar yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get document_open => 'Dokümanı aç';
+
+  @override
+  String get schedule_title => 'Etkinlik Programı';
+
+  @override
+  String get schedule_empty =>
+      'Bu etkinlik için henüz bir program oluşturulmadı.';
+
+  @override
+  String get schedule_emptyDay => 'Bu gün için planlanmış bir etkinlik yok.';
+
+  @override
+  String get schedule_loadError =>
+      'Program yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get activity_title => 'Etkinlik Detayları';
+
+  @override
+  String get activity_about => 'Hakkında';
+
+  @override
+  String get activity_participants => 'Katılımcılar';
+
+  @override
+  String get activity_notFound => 'Bu etkinlik artık programda yer almıyor.';
+
+  @override
+  String get participant_title => 'Katılımcı Detayları';
+
+  @override
+  String get participant_about => 'Hakkında';
+
+  @override
+  String get participant_notFound =>
+      'Bu katılımcı artık bu etkinlikte yer almıyor.';
+
+  @override
+  String get participant_tabAbout => 'Hakkında';
+
+  @override
+  String get participant_tabEvent => 'Etkinlik';
+
+  @override
+  String get participant_eventSchedule => 'Etkinlik Programı';
+
+  @override
+  String get participant_noActivities =>
+      'Bu katılımcı henüz hiçbir programda yer almıyor.';
+
+  @override
+  String get participant_otherSpeakers => 'Diğer Konuşmacıları Keşfet';
+
+  @override
+  String get participant_noOtherSpeakers =>
+      'Bu etkinliğe henüz başka bir katılımcı eklenmedi.';
+
+  @override
+  String get gallery_title => 'Galeri';
+
+  @override
+  String get gallery_tabPhotos => 'Fotoğraflar';
+
+  @override
+  String get gallery_tabVideos => 'Videolar';
+
+  @override
+  String get gallery_emptyPhotos =>
+      'Henüz fotoğraf paylaşılmadı. İlk paylaşan siz olun.';
+
+  @override
+  String get gallery_emptyVideos =>
+      'Henüz video paylaşılmadı. İlk paylaşan siz olun.';
+
+  @override
+  String get gallery_loadError => 'Galeri yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get gallery_add => 'Yeni Ekle';
+
+  @override
+  String get gallery_uploading => 'Yükleniyor…';
+
+  @override
+  String get gallery_uploadSuccess => 'Galeriye eklendi.';
+
+  @override
+  String get gallery_uploadError =>
+      'Yükleme tamamlanamadı. Lütfen tekrar deneyin.';
+
+  @override
+  String get gallery_back => 'Galeriye dön';
+
+  @override
+  String get gallery_share => 'Paylaş';
+
+  @override
+  String get gallery_report => 'Bildir';
+
+  @override
+  String get gallery_shareError =>
+      'Paylaşım yapılamadı. Lütfen tekrar deneyin.';
+
+  @override
+  String get gallery_reportTitle =>
+      'Bu içeriği bildirmek istediğinizden emin misiniz?';
+
+  @override
+  String get gallery_reportDescription =>
+      'Etkinlik ekibi içeriği inceleyecek. Sorunun ne olduğunu belirten bir not ekleyebilirsiniz.';
+
+  @override
+  String get gallery_reportReasonHint =>
+      'Neden bildiriyorsunuz? (isteğe bağlı)';
+
+  @override
+  String get gallery_reportConfirm => 'Bildir';
+
+  @override
+  String get gallery_reportCancel => 'Vazgeç';
+
+  @override
+  String get gallery_reportSuccess => 'Teşekkürler — içerik bildirildi.';
+
+  @override
+  String get gallery_reportError =>
+      'İçerik bildirilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get gallery_addTitle => 'Galeriye ekle';
+
+  @override
+  String get gallery_addTakePhoto => 'Fotoğraf çek';
+
+  @override
+  String get gallery_addRecordVideo => 'Video çek';
+
+  @override
+  String get gallery_addChooseExisting => 'Galerinizden seçin';
+
+  @override
+  String get gallery_addCancel => 'Vazgeç';
+
+  @override
+  String landing_greeting(String name) {
+    return 'Merhaba, $name';
+  }
+
+  @override
+  String get landing_readNow => 'Şimdi Oku';
+
+  @override
+  String get landing_seeAll => 'Tümünü Gör';
+
+  @override
+  String get community_title => 'Topluluktan Haberler';
+
+  @override
+  String get community_empty => 'Henüz gönderi yok, ilk paylaşan siz olun!';
+
+  @override
+  String get community_createPost => 'Oluştur';
+
+  @override
+  String get community_loadError =>
+      'Topluluk akışı yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_newPost => 'Yeni Gönderi';
+
+  @override
+  String get community_post => 'Paylaş';
+
+  @override
+  String get community_captionHint => 'Bir açıklama yazın…';
+
+  @override
+  String get community_addMediaTitle => 'Gönderinize ekleyin';
+
+  @override
+  String get community_addMedia => 'Fotoğraf veya video ekle';
+
+  @override
+  String get community_mediaEmpty =>
+      'Fotoğraf ya da video çekin veya galerinizden seçin. Birden fazla seçerseniz seçtiğiniz sırayla görünürler.';
+
+  @override
+  String get community_mediaRequired =>
+      'Paylaşmak için en az bir fotoğraf veya video ekleyin.';
+
+  @override
+  String community_mediaLimit(int count) {
+    return 'Bir gönderi en fazla $count fotoğraf ve video taşır.';
+  }
+
+  @override
+  String get community_mediaError => 'Eklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_posting => 'Gönderiniz paylaşılıyor…';
+
+  @override
+  String get community_postSuccess => 'Gönderiniz paylaşıldı.';
+
+  @override
+  String get community_postError =>
+      'Gönderiniz paylaşılamadı. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_postTitle => 'Gönderi';
+
+  @override
+  String get community_postMissing => 'Bu gönderi artık mevcut değil.';
+
+  @override
+  String get community_comments => 'Yorumlar';
+
+  @override
+  String get community_commentsEmpty =>
+      'Henüz yorum yok. Sohbeti siz başlatın.';
+
+  @override
+  String get community_commentsLoadError =>
+      'Yorumlar yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_commentHint => 'Yorum ekle…';
+
+  @override
+  String get community_commentSend => 'Gönder';
+
+  @override
+  String get community_commentError =>
+      'Yorumunuz eklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_likeError =>
+      'Beğeniniz kaydedilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get community_more => 'Daha fazla';
+
+  @override
+  String get community_options => 'Gönderi seçenekleri';
+
+  @override
+  String get community_report => 'Gönderiyi bildir';
+
+  @override
+  String get community_reportedAlready => 'Zaten bildirildi';
+
+  @override
+  String get community_cancel => 'Vazgeç';
+
+  @override
+  String get community_reportTitle =>
+      'Bu gönderiyi bildirmek istediğinize emin misiniz?';
+
+  @override
+  String get community_reportDescription =>
+      'Etkinlik ekibi inceleyecek. Sorunun ne olduğuna dair bir not ekleyebilirsiniz.';
+
+  @override
+  String get community_reportReasonHint =>
+      'Neden bildiriyorsunuz? (isteğe bağlı)';
+
+  @override
+  String get community_reportConfirm => 'Bildir';
+
+  @override
+  String get community_reportSuccess => 'Teşekkürler — bu gönderi bildirildi.';
+
+  @override
+  String get community_reportError =>
+      'Bu gönderi bildirilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String landing_enjoyDay(String day, String eventName) {
+    return '$eventName - $day. günün tadını çıkar!';
+  }
 }

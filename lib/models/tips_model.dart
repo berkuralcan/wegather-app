@@ -1,3 +1,5 @@
+import 'localized_text.dart';
+
 /// The kind of content a tip holds. The string values match the JSON payload.
 enum TipType {
   text('text'),
@@ -15,41 +17,100 @@ enum TipType {
   );
 }
 
+/// The languages a multilingual tip is authored in — the app-wide [WgLocale],
+/// aliased so tip code keeps reading as `TipLocale`. Kept in sync with the admin
+/// panel's `TipLocale` (`types/tips.ts`), which is likewise an alias.
+typedef TipLocale = WgLocale;
+
 /// A single tip.
 ///
-/// [content] is the source of truth for the tip's type — [tipType] is derived
-/// from it, so the two can never disagree.
+/// [tipType] is the source of truth for the payload shape; [isMultilingual]
+/// decides whether the title/content are bare values or per-locale maps.
+///
+/// Multilingual tips carry a value per [TipLocale]; mono tips store a single,
+/// language-agnostic value under [TipLocale.tr]. The [title]/[content] getters
+/// default to the primary (Turkish) language so existing displayers keep
+/// working — swap them for [titleFor]/[contentFor] once the app adds a language
+/// switch.
 class TipModel {
   final String id;
-  final String title;
   final String icon;
-  final TipContent content;
+  final bool isMultilingual;
+  final TipType tipType;
+  final Map<TipLocale, String> titles;
+  final Map<TipLocale, TipContent> contents;
 
   const TipModel({
     required this.id,
-    required this.title,
     required this.icon,
-    required this.content,
+    required this.isMultilingual,
+    required this.tipType,
+    required this.titles,
+    required this.contents,
   });
 
-  TipType get tipType => content.type;
+  /// The title for [locale], falling back to the primary (Turkish) value.
+  String titleFor(TipLocale locale) =>
+      titles[locale] ?? titles[TipLocale.tr] ?? '';
+
+  /// The content for [locale], falling back to the primary (Turkish) value.
+  TipContent contentFor(TipLocale locale) =>
+      contents[locale] ?? contents[TipLocale.tr] ?? const TextTipContent('');
+
+  /// Primary-language title (Turkish).
+  String get title => titleFor(TipLocale.tr);
+
+  /// Primary-language content (Turkish).
+  TipContent get content => contentFor(TipLocale.tr);
 
   factory TipModel.fromJson(Map<String, dynamic> json) {
     final type = TipType.fromJson(json['tipType'] ?? json['type'] ?? 'text');
+    final isMultilingual =
+        json['isMultilingual'] as bool? ?? isLocaleMap(json['content']);
+
+    final titles = <TipLocale, String>{};
+    final contents = <TipLocale, TipContent>{};
+
+    if (isMultilingual) {
+      final titleMap = (json['title'] as Map?) ?? const {};
+      final contentMap = (json['content'] as Map?) ?? const {};
+      for (final locale in TipLocale.values) {
+        titles[locale] = titleMap[locale.jsonValue] as String? ?? '';
+        contents[locale] = TipContent.fromJson(
+          type,
+          contentMap[locale.jsonValue],
+        );
+      }
+    } else {
+      titles[TipLocale.tr] = json['title'] as String? ?? '';
+      contents[TipLocale.tr] = TipContent.fromJson(type, json['content']);
+    }
+
     return TipModel(
       id: json['id'] ?? '',
-      title: json['title'] ?? '',
       icon: json['icon'] ?? '',
-      content: TipContent.fromJson(type, json['content']),
+      isMultilingual: isMultilingual,
+      tipType: type,
+      titles: titles,
+      contents: contents,
     );
   }
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'title': title,
     'icon': icon,
     'tipType': tipType.jsonValue,
-    'content': content.toJsonContent(),
+    'isMultilingual': isMultilingual,
+    'title': isMultilingual
+        ? {for (final l in TipLocale.values) l.jsonValue: titles[l] ?? ''}
+        : titles[TipLocale.tr] ?? '',
+    'content': isMultilingual
+        ? {
+            for (final l in TipLocale.values)
+              l.jsonValue: (contents[l] ?? const TextTipContent(''))
+                  .toJsonContent(),
+          }
+        : content.toJsonContent(),
   };
 }
 

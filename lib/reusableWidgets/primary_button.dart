@@ -30,9 +30,7 @@ class PrimaryButton extends StatelessWidget {
         shadowColor: Colors.transparent,
         foregroundColor: Colors.white,
         padding: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
       ),
       child: Ink(
         decoration: BoxDecoration(

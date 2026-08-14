@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../config/app_config.dart';
 import '../config/text_styles.dart';
 import 'package:go_router/go_router.dart';
@@ -11,11 +12,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// leaves more space between the top of the screen and the title.
   final double toolbarHeight;
 
+  /// An action at the far end of the bar, opposite the back button — the post
+  /// button on the composer, for instance. Centred vertically and inset from the
+  /// edge by the same 16px the app's content uses.
+  final Widget? trailing;
+
   const CustomAppBar({
     super.key,
     required this.title,
     this.onBackPressed,
     this.toolbarHeight = 96,
+    this.trailing,
   });
 
   @override
@@ -30,14 +37,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       leading: showBack
           ? IconButton(
-              icon: const Icon(
-                Icons.chevron_left,
-                color: AppConfig.colorTertiary,
-                size: 40,
+              icon: SvgPicture.asset(
+                'assets/icons/back.svg',
+                width: 24,
+                height: 24,
+                colorFilter: const ColorFilter.mode(
+                  AppConfig.colorTertiary,
+                  BlendMode.srcIn,
+                ),
               ),
               onPressed: onBackPressed ?? () => context.pop(),
             )
           : null,
+      actions: trailing == null
+          ? null
+          : [
+              Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Center(child: trailing),
+              ),
+            ],
       centerTitle: true,
       toolbarHeight: toolbarHeight,
       // Fully transparent so the app background gradient shows through, even

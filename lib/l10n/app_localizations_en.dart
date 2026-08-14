@@ -111,6 +111,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get profile_choose_from_gallery => 'Choose from Gallery';
 
   @override
+  String get profile_tabAbout => 'About';
+
+  @override
+  String get profile_tabPosts => 'Posts';
+
+  @override
+  String get profile_postsEmpty => 'Nothing has been posted yet.';
+
+  @override
   String get login_forgotPassword => 'Forgot Password?';
 
   @override
@@ -152,4 +161,342 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get terms_title => 'Terms and Services';
+
+  @override
+  String get common_retry => 'Try Again';
+
+  @override
+  String get common_logout => 'Log Out';
+
+  @override
+  String get events_title => 'Select Event';
+
+  @override
+  String get events_noAccess =>
+      'You don\'t have access to any events yet. Please contact your event organizer.';
+
+  @override
+  String get events_loadError =>
+      'Your events couldn\'t be loaded. Please check your connection and try again.';
+
+  @override
+  String get tips_title => 'Important Information';
+
+  @override
+  String get tips_empty => 'No information has been added for this event yet.';
+
+  @override
+  String get tips_loadError =>
+      'This information couldn\'t be loaded. Please try again.';
+
+  @override
+  String get announcements_title => 'Announcements';
+
+  @override
+  String get announcements_empty =>
+      'No announcements have been posted for this event yet.';
+
+  @override
+  String get announcements_loadError =>
+      'Announcements couldn\'t be loaded. Please try again.';
+
+  @override
+  String get announcement_openLink => 'Open link';
+
+  @override
+  String get documents_title => 'Documents';
+
+  @override
+  String get documents_empty =>
+      'No documents have been shared for this event yet.';
+
+  @override
+  String get documents_loadError =>
+      'Documents couldn\'t be loaded. Please try again.';
+
+  @override
+  String get document_open => 'Open document';
+
+  @override
+  String get schedule_title => 'Event Schedule';
+
+  @override
+  String get schedule_empty =>
+      'No activities have been scheduled for this event yet.';
+
+  @override
+  String get schedule_emptyDay => 'Nothing is scheduled for this day.';
+
+  @override
+  String get schedule_loadError =>
+      'The schedule couldn\'t be loaded. Please try again.';
+
+  @override
+  String get activity_title => 'Event Details';
+
+  @override
+  String get activity_about => 'About';
+
+  @override
+  String get activity_participants => 'Participants';
+
+  @override
+  String get activity_notFound =>
+      'This activity is no longer part of the schedule.';
+
+  @override
+  String get participant_title => 'Participant Details';
+
+  @override
+  String get participant_about => 'About';
+
+  @override
+  String get participant_notFound =>
+      'This participant is no longer part of this activity.';
+
+  @override
+  String get participant_tabAbout => 'About';
+
+  @override
+  String get participant_tabEvent => 'Event';
+
+  @override
+  String get participant_eventSchedule => 'Event Schedule';
+
+  @override
+  String get participant_noActivities =>
+      'This participant isn\'t taking part in any activity yet.';
+
+  @override
+  String get participant_otherSpeakers => 'Explore Other Speakers';
+
+  @override
+  String get participant_noOtherSpeakers =>
+      'Nobody else has been added to this event yet.';
+
+  @override
+  String get gallery_title => 'Gallery';
+
+  @override
+  String get gallery_tabPhotos => 'Photos';
+
+  @override
+  String get gallery_tabVideos => 'Videos';
+
+  @override
+  String get gallery_emptyPhotos =>
+      'No photos have been shared yet. Be the first to add one.';
+
+  @override
+  String get gallery_emptyVideos =>
+      'No videos have been shared yet. Be the first to add one.';
+
+  @override
+  String get gallery_loadError =>
+      'The gallery couldn\'t be loaded. Please try again.';
+
+  @override
+  String get gallery_add => 'Add New';
+
+  @override
+  String get gallery_uploading => 'Uploading…';
+
+  @override
+  String get gallery_uploadSuccess => 'Added to the gallery.';
+
+  @override
+  String get gallery_uploadError =>
+      'Your upload couldn\'t be completed. Please try again.';
+
+  @override
+  String get gallery_back => 'Back to the gallery';
+
+  @override
+  String get gallery_share => 'Share';
+
+  @override
+  String get gallery_report => 'Report';
+
+  @override
+  String get gallery_shareError =>
+      'This couldn\'t be shared. Please try again.';
+
+  @override
+  String get gallery_reportTitle =>
+      'Are you sure you want to report this media?';
+
+  @override
+  String get gallery_reportDescription =>
+      'The event team will review it. You can add a note about what\'s wrong with it.';
+
+  @override
+  String get gallery_reportReasonHint =>
+      'Why are you reporting this? (optional)';
+
+  @override
+  String get gallery_reportConfirm => 'Report';
+
+  @override
+  String get gallery_reportCancel => 'Cancel';
+
+  @override
+  String get gallery_reportSuccess => 'Thanks — this has been reported.';
+
+  @override
+  String get gallery_reportError =>
+      'This couldn\'t be reported. Please try again.';
+
+  @override
+  String get gallery_addTitle => 'Add to the gallery';
+
+  @override
+  String get gallery_addTakePhoto => 'Take a photo';
+
+  @override
+  String get gallery_addRecordVideo => 'Record a video';
+
+  @override
+  String get gallery_addChooseExisting => 'Choose from your gallery';
+
+  @override
+  String get gallery_addCancel => 'Cancel';
+
+  @override
+  String landing_greeting(String name) {
+    return 'Hi, $name';
+  }
+
+  @override
+  String get landing_readNow => 'Read Now';
+
+  @override
+  String get landing_seeAll => 'See All';
+
+  @override
+  String get community_title => 'Community Updates';
+
+  @override
+  String get community_empty => 'No posts yet, be the first to create one!';
+
+  @override
+  String get community_createPost => 'Create Post';
+
+  @override
+  String get community_loadError =>
+      'The community feed couldn\'t be loaded. Please try again.';
+
+  @override
+  String get community_newPost => 'New Post';
+
+  @override
+  String get community_post => 'Post';
+
+  @override
+  String get community_captionHint => 'Write a caption…';
+
+  @override
+  String get community_addMediaTitle => 'Add to your post';
+
+  @override
+  String get community_addMedia => 'Add photos or videos';
+
+  @override
+  String get community_mediaEmpty =>
+      'Take a photo or video, or choose some from your library. Pick several and they\'ll appear in the order you picked them.';
+
+  @override
+  String get community_mediaRequired =>
+      'Add at least one photo or video to post.';
+
+  @override
+  String community_mediaLimit(int count) {
+    return 'A post holds up to $count photos and videos.';
+  }
+
+  @override
+  String get community_mediaError =>
+      'That couldn\'t be added. Please try again.';
+
+  @override
+  String get community_posting => 'Sharing your post…';
+
+  @override
+  String get community_postSuccess => 'Your post has been shared.';
+
+  @override
+  String get community_postError =>
+      'Your post couldn\'t be shared. Please try again.';
+
+  @override
+  String get community_postTitle => 'Post';
+
+  @override
+  String get community_postMissing => 'This post is no longer available.';
+
+  @override
+  String get community_comments => 'Comments';
+
+  @override
+  String get community_commentsEmpty =>
+      'No comments yet. Start the conversation.';
+
+  @override
+  String get community_commentsLoadError =>
+      'The comments couldn\'t be loaded. Please try again.';
+
+  @override
+  String get community_commentHint => 'Add a comment…';
+
+  @override
+  String get community_commentSend => 'Send';
+
+  @override
+  String get community_commentError =>
+      'Your comment couldn\'t be added. Please try again.';
+
+  @override
+  String get community_likeError =>
+      'Your like couldn\'t be saved. Please try again.';
+
+  @override
+  String get community_more => 'More';
+
+  @override
+  String get community_options => 'Post options';
+
+  @override
+  String get community_report => 'Report post';
+
+  @override
+  String get community_reportedAlready => 'Already reported';
+
+  @override
+  String get community_cancel => 'Cancel';
+
+  @override
+  String get community_reportTitle =>
+      'Are you sure you want to report this post?';
+
+  @override
+  String get community_reportDescription =>
+      'The event team will review it. You can add a note about what\'s wrong with it.';
+
+  @override
+  String get community_reportReasonHint =>
+      'Why are you reporting this? (optional)';
+
+  @override
+  String get community_reportConfirm => 'Report';
+
+  @override
+  String get community_reportSuccess => 'Thanks — this has been reported.';
+
+  @override
+  String get community_reportError =>
+      'This couldn\'t be reported. Please try again.';
+
+  @override
+  String landing_enjoyDay(String day, String eventName) {
+    return 'Enjoy the $day day of $eventName';
+  }
 }

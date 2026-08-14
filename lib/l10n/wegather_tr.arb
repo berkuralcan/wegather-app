@@ -58,6 +58,9 @@
     "profile_change_profile_photo": "Profil Fotoğrafını Değiştir",
     "profile_take_photo": "Yeni Fotoğraf Çek",
     "profile_choose_from_gallery": "Galeriden Seç",
+    "profile_tabAbout": "Hakkında",
+    "profile_tabPosts": "Gönderiler",
+    "profile_postsEmpty": "Henüz bir gönderi paylaşılmadı.",
     "login_forgotPassword": "Şifremi Unuttum?",
     "@login_forgotPassword": {
         "description": "The forgot password link on the login screen"
@@ -109,5 +112,203 @@
     "terms_title": "Kullanım Koşulları",
     "@terms_title": {
         "description": "The title of the terms and services screen"
-    }
+    },
+    "common_retry": "Tekrar Dene",
+    "@common_retry": {
+        "description": "The label of the retry button on error states"
+    },
+    "common_logout": "Çıkış Yap",
+    "@common_logout": {
+        "description": "The label of the log out button"
+    },
+    "events_title": "Etkinlik Seçin",
+    "@events_title": {
+        "description": "The title of the event selection screen"
+    },
+    "events_noAccess": "Henüz hiçbir etkinliğe erişiminiz yok. Lütfen etkinlik organizatörünüzle iletişime geçin.",
+    "@events_noAccess": {
+        "description": "Shown on the event selection screen when the user has no accessible events"
+    },
+    "events_loadError": "Etkinlikleriniz yüklenemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.",
+    "@events_loadError": {
+        "description": "Shown when loading the user's events fails"
+    },
+    "tips_title": "Önemli Bilgiler",
+    "@tips_title": {
+        "description": "The title of the important tips screen"
+    },
+    "tips_empty": "Bu etkinlik için henüz bilgi eklenmemiş.",
+    "@tips_empty": {
+        "description": "Shown when the selected event has no tips"
+    },
+    "tips_loadError": "Bilgiler yüklenemedi. Lütfen tekrar deneyin.",
+    "@tips_loadError": {
+        "description": "Shown when loading the event's tips fails"
+    },
+    "announcements_title": "Duyurular",
+    "@announcements_title": {
+        "description": "The title of the announcements screen"
+    },
+    "announcements_empty": "Bu etkinlik için henüz duyuru eklenmemiş.",
+    "@announcements_empty": {
+        "description": "Shown when the selected event has no announcements"
+    },
+    "announcements_loadError": "Duyurular yüklenemedi. Lütfen tekrar deneyin.",
+    "@announcements_loadError": {
+        "description": "Shown when loading the event's announcements fails"
+    },
+    "announcement_openLink": "Bağlantıyı aç",
+    "@announcement_openLink": {
+        "description": "Button on an announcement that opens its link in the browser"
+    },
+    "documents_title": "Dokümanlar",
+    "@documents_title": {
+        "description": "The title of the documents screen"
+    },
+    "documents_empty": "Bu etkinlik için henüz doküman paylaşılmamış.",
+    "@documents_empty": {
+        "description": "Shown when the selected event has no documents"
+    },
+    "documents_loadError": "Dokümanlar yüklenemedi. Lütfen tekrar deneyin.",
+    "@documents_loadError": {
+        "description": "Shown when loading the event's documents fails"
+    },
+    "document_open": "Dokümanı aç",
+    "@document_open": {
+        "description": "Button on a document that opens the file"
+    },
+    "schedule_title": "Etkinlik Programı",
+    "@schedule_title": {
+        "description": "The header of the calendar screen (the bottom nav label is menu_calendar)"
+    },
+    "schedule_empty": "Bu etkinlik için henüz bir program oluşturulmadı.",
+    "@schedule_empty": {
+        "description": "Shown on the calendar screen when the event has no activities at all"
+    },
+    "schedule_emptyDay": "Bu gün için planlanmış bir etkinlik yok.",
+    "@schedule_emptyDay": {
+        "description": "Shown on the calendar screen when the selected day has no activities"
+    },
+    "schedule_loadError": "Program yüklenemedi. Lütfen tekrar deneyin.",
+    "@schedule_loadError": {
+        "description": "Shown when loading the event's schedule fails"
+    },
+    "activity_title": "Etkinlik Detayları",
+    "@activity_title": {
+        "description": "The title of the activity detail screen"
+    },
+    "activity_about": "Hakkında",
+    "@activity_about": {
+        "description": "The heading above an activity's description on its detail screen"
+    },
+    "activity_participants": "Katılımcılar",
+    "@activity_participants": {
+        "description": "The heading of the participants box on the activity detail screen"
+    },
+    "activity_notFound": "Bu etkinlik artık programda yer almıyor.",
+    "@activity_notFound": {
+        "description": "Shown on the activity detail screen when the activity isn't in the loaded schedule"
+    },
+    "participant_title": "Katılımcı Detayları",
+    "@participant_title": {
+        "description": "The title of the participant detail screen"
+    },
+    "participant_about": "Hakkında",
+    "@participant_about": {
+        "description": "The heading above a participant's bio on their detail screen"
+    },
+    "participant_notFound": "Bu katılımcı artık bu etkinlikte yer almıyor.",
+    "@participant_notFound": {
+        "description": "Shown on the participant detail screen when the participant isn't in the activity's roster"
+    },
+    "participant_tabAbout": "Hakkında",
+    "@participant_tabAbout": {
+        "description": "The label of the tab that shows a participant's own details on their detail screen"
+    },
+    "participant_tabEvent": "Etkinlik",
+    "@participant_tabEvent": {
+        "description": "The label of the tab that shows a participant's part in the event on their detail screen"
+    },
+    "participant_eventSchedule": "Etkinlik Programı",
+    "@participant_eventSchedule": {
+        "description": "The heading of the box listing the activities a participant takes part in, on the Event tab of their detail screen"
+    },
+    "participant_noActivities": "Bu katılımcı henüz hiçbir programda yer almıyor.",
+    "@participant_noActivities": {
+        "description": "Shown in place of a participant's schedule when they are assigned to no activity at all"
+    },
+    "participant_otherSpeakers": "Diğer Konuşmacıları Keşfet",
+    "@participant_otherSpeakers": {
+        "description": "The heading of the box listing the event's other roster members, on the Event tab of a participant's detail screen"
+    },
+    "participant_noOtherSpeakers": "Bu etkinliğe henüz başka bir katılımcı eklenmedi.",
+    "@participant_noOtherSpeakers": {
+        "description": "Shown in place of the other speakers when the participant is the event's only roster member"
+    },
+    "gallery_title": "Galeri",
+    "gallery_tabPhotos": "Fotoğraflar",
+    "gallery_tabVideos": "Videolar",
+    "gallery_emptyPhotos": "Henüz fotoğraf paylaşılmadı. İlk paylaşan siz olun.",
+    "gallery_emptyVideos": "Henüz video paylaşılmadı. İlk paylaşan siz olun.",
+    "gallery_loadError": "Galeri yüklenemedi. Lütfen tekrar deneyin.",
+    "gallery_add": "Yeni Ekle",
+    "gallery_uploading": "Yükleniyor…",
+    "gallery_uploadSuccess": "Galeriye eklendi.",
+    "gallery_uploadError": "Yükleme tamamlanamadı. Lütfen tekrar deneyin.",
+    "gallery_back": "Galeriye dön",
+    "gallery_share": "Paylaş",
+    "gallery_report": "Bildir",
+    "gallery_shareError": "Paylaşım yapılamadı. Lütfen tekrar deneyin.",
+    "gallery_reportTitle": "Bu içeriği bildirmek istediğinizden emin misiniz?",
+    "gallery_reportDescription": "Etkinlik ekibi içeriği inceleyecek. Sorunun ne olduğunu belirten bir not ekleyebilirsiniz.",
+    "gallery_reportReasonHint": "Neden bildiriyorsunuz? (isteğe bağlı)",
+    "gallery_reportConfirm": "Bildir",
+    "gallery_reportCancel": "Vazgeç",
+    "gallery_reportSuccess": "Teşekkürler — içerik bildirildi.",
+    "gallery_reportError": "İçerik bildirilemedi. Lütfen tekrar deneyin.",
+    "gallery_addTitle": "Galeriye ekle",
+    "gallery_addTakePhoto": "Fotoğraf çek",
+    "gallery_addRecordVideo": "Video çek",
+    "gallery_addChooseExisting": "Galerinizden seçin",
+    "gallery_addCancel": "Vazgeç",
+    "landing_greeting": "Merhaba, {name}",
+    "landing_readNow": "Şimdi Oku",
+    "landing_seeAll": "Tümünü Gör",
+    "community_title": "Topluluktan Haberler",
+    "community_empty": "Henüz gönderi yok, ilk paylaşan siz olun!",
+    "community_createPost": "Oluştur",
+    "community_loadError": "Topluluk akışı yüklenemedi. Lütfen tekrar deneyin.",
+    "community_newPost": "Yeni Gönderi",
+    "community_post": "Paylaş",
+    "community_captionHint": "Bir açıklama yazın…",
+    "community_addMediaTitle": "Gönderinize ekleyin",
+    "community_addMedia": "Fotoğraf veya video ekle",
+    "community_mediaEmpty": "Fotoğraf ya da video çekin veya galerinizden seçin. Birden fazla seçerseniz seçtiğiniz sırayla görünürler.",
+    "community_mediaRequired": "Paylaşmak için en az bir fotoğraf veya video ekleyin.",
+    "community_mediaLimit": "Bir gönderi en fazla {count} fotoğraf ve video taşır.",
+    "community_mediaError": "Eklenemedi. Lütfen tekrar deneyin.",
+    "community_posting": "Gönderiniz paylaşılıyor…",
+    "community_postSuccess": "Gönderiniz paylaşıldı.",
+    "community_postError": "Gönderiniz paylaşılamadı. Lütfen tekrar deneyin.",
+    "community_postTitle": "Gönderi",
+    "community_postMissing": "Bu gönderi artık mevcut değil.",
+    "community_comments": "Yorumlar",
+    "community_commentsEmpty": "Henüz yorum yok. Sohbeti siz başlatın.",
+    "community_commentsLoadError": "Yorumlar yüklenemedi. Lütfen tekrar deneyin.",
+    "community_commentHint": "Yorum ekle…",
+    "community_commentSend": "Gönder",
+    "community_commentError": "Yorumunuz eklenemedi. Lütfen tekrar deneyin.",
+    "community_likeError": "Beğeniniz kaydedilemedi. Lütfen tekrar deneyin.",
+    "community_more": "Daha fazla",
+    "community_options": "Gönderi seçenekleri",
+    "community_report": "Gönderiyi bildir",
+    "community_reportedAlready": "Zaten bildirildi",
+    "community_cancel": "Vazgeç",
+    "community_reportTitle": "Bu gönderiyi bildirmek istediğinize emin misiniz?",
+    "community_reportDescription": "Etkinlik ekibi inceleyecek. Sorunun ne olduğuna dair bir not ekleyebilirsiniz.",
+    "community_reportReasonHint": "Neden bildiriyorsunuz? (isteğe bağlı)",
+    "community_reportConfirm": "Bildir",
+    "community_reportSuccess": "Teşekkürler — bu gönderi bildirildi.",
+    "community_reportError": "Bu gönderi bildirilemedi. Lütfen tekrar deneyin.",
+    "landing_enjoyDay": "{eventName} - {day}. günün tadını çıkar!"
 }

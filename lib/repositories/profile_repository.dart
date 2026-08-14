@@ -6,7 +6,7 @@ import 'dart:io';
 
 class ProfileRepository extends BaseRepository<ProfileModel> {
   ProfileRepository() : super('users');
-  
+
   final StorageService _storageService = StorageService();
 
   @override
@@ -34,10 +34,13 @@ class ProfileRepository extends BaseRepository<ProfileModel> {
   /// Updates a user's profile with the new image URL
   Future<void> updateProfileImage(String userId, String imageUrl) async {
     try {
-      await FirebaseFirestore.instance.collection(collectionPath).doc(userId).update({
-        'profileImage': imageUrl,
-        'updatedAt': FieldValue.serverTimestamp(),
-      });
+      await FirebaseFirestore.instance
+          .collection(collectionPath)
+          .doc(userId)
+          .update({
+            'profileImage': imageUrl,
+            'updatedAt': FieldValue.serverTimestamp(),
+          });
     } catch (e) {
       throw Exception('Failed to update profile image URL: $e');
     }
@@ -61,4 +64,3 @@ class ProfileRepository extends BaseRepository<ProfileModel> {
     }
   }
 }
-

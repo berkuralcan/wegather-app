@@ -20,6 +20,7 @@ class WgMenuIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
             alignment: Alignment.center,
@@ -34,7 +35,22 @@ class WgMenuIcon extends StatelessWidget {
             child: Image.asset(iconPath, width: 28, height: 28),
           ),
           SizedBox(height: 8),
-          Text(title, style: AppTextStyles.menuIconTextStyle),
+          // Fixed-height label slot so every tile's text sits on the same
+          // baseline; long titles scale down rather than wrap to a second line.
+          SizedBox(
+            height: 16,
+            width: double.infinity,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                title,
+                maxLines: 1,
+                softWrap: false,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.menuIconTextStyle,
+              ),
+            ),
+          ),
         ],
       ),
     );

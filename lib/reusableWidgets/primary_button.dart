@@ -11,10 +11,14 @@ class PrimaryButton extends StatelessWidget {
     super.key,
     required this.label,
     required this.onPressed,
+    this.icon,
     this.minHeight = 48,
   });
 
   final String label;
+
+  /// An optional glyph before the label, drawn at the label's size.
+  final Widget? icon;
 
   /// Tap handler. Pass `null` to render the button as disabled.
   final VoidCallback? onPressed;
@@ -40,7 +44,15 @@ class PrimaryButton extends StatelessWidget {
         child: Container(
           constraints: BoxConstraints(minHeight: minHeight),
           alignment: Alignment.center,
-          child: Text(label),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (icon != null) ...[icon!, const SizedBox(width: 8)],
+              Flexible(
+                child: Text(label, maxLines: 1, overflow: TextOverflow.ellipsis),
+              ),
+            ],
+          ),
         ),
       ),
     );

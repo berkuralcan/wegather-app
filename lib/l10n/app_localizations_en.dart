@@ -48,7 +48,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeIcon_my_profile => 'My Profile';
 
   @override
-  String get homeIcon_information => 'Important Information';
+  String get homeIcon_information => 'Information';
 
   @override
   String get homeIcon_rules => 'Event Rules';
@@ -118,6 +118,124 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profile_postsEmpty => 'Nothing has been posted yet.';
+
+  @override
+  String get profile_myProfileTitle => 'Your Profile';
+
+  @override
+  String get profile_photoUploading => 'Uploading your photo…';
+
+  @override
+  String get profile_photoUpdated => 'Your profile photo has been updated.';
+
+  @override
+  String get profile_photoError => 'Your profile photo could not be updated.';
+
+  @override
+  String get profile_descriptionEmpty =>
+      'Add a description here and share your social media accounts so the other attendees can get to know you.';
+
+  @override
+  String get profile_shareProfile => 'Share Profile';
+
+  @override
+  String get profile_shareError => 'Your profile could not be shared.';
+
+  @override
+  String get profile_edit => 'Edit';
+
+  @override
+  String get profile_editTitle => 'Edit Profile';
+
+  @override
+  String get profile_descriptionLabel => 'Description';
+
+  @override
+  String get profile_descriptionHint =>
+      'Tell the other attendees about yourself';
+
+  @override
+  String get profile_socialMedia => 'Social Media';
+
+  @override
+  String get profile_linkedInHint => 'linkedin.com/in/your-profile';
+
+  @override
+  String get profile_instagramHint => 'instagram.com/your-profile';
+
+  @override
+  String get profile_websiteHint => 'yourwebsite.com';
+
+  @override
+  String get profile_portfolioHint => 'yourportfolio.com';
+
+  @override
+  String get profile_save => 'Save';
+
+  @override
+  String get profile_cancel => 'Cancel';
+
+  @override
+  String get profile_saved => 'Your profile has been updated.';
+
+  @override
+  String get profile_saveError => 'Your profile could not be saved.';
+
+  @override
+  String get profile_loadError => 'Your profile could not be loaded.';
+
+  @override
+  String get profile_notFound => 'Profile not found.';
+
+  @override
+  String get profile_signOut => 'Sign Out';
+
+  @override
+  String get profile_menuInformation => 'My Personal Information';
+
+  @override
+  String get profile_menuQrCode => 'My QR Code';
+
+  @override
+  String get profile_menuAccommodation => 'My Accommodation Details';
+
+  @override
+  String get profile_menuTransportation => 'My Transportation Details';
+
+  @override
+  String get profile_menuFlights => 'My Flight Details';
+
+  @override
+  String get profile_qrHint =>
+      'Show this code to the event team to identify yourself.';
+
+  @override
+  String get profile_comingSoon => 'This section will be here soon.';
+
+  @override
+  String get profile_personalInfo => 'Personal Info';
+
+  @override
+  String get profile_socialProfiles => 'Social Profiles';
+
+  @override
+  String get profile_fullName => 'Full Name';
+
+  @override
+  String get profile_jobTitle => 'Title';
+
+  @override
+  String get profile_company => 'Company';
+
+  @override
+  String get profile_emailAddress => 'Email Address';
+
+  @override
+  String get profile_phone => 'Contact Number';
+
+  @override
+  String get profile_infoEmpty =>
+      'There is no personal information on your profile yet.';
 
   @override
   String get login_forgotPassword => 'Forgot Password?';
@@ -362,11 +480,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get gallery_addCancel => 'Cancel';
 
   @override
-  String landing_greeting(String name) {
-    return 'Hi, $name';
-  }
-
-  @override
   String get landing_readNow => 'Read Now';
 
   @override
@@ -407,11 +520,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get community_mediaRequired =>
       'Add at least one photo or video to post.';
-
-  @override
-  String community_mediaLimit(int count) {
-    return 'A post holds up to $count photos and videos.';
-  }
 
   @override
   String get community_mediaError =>
@@ -496,7 +604,301 @@ class AppLocalizationsEn extends AppLocalizations {
       'This couldn\'t be reported. Please try again.';
 
   @override
+  String get transportation_title => 'Transfers';
+
+  @override
+  String get transportation_fromLabel => 'Departure';
+
+  @override
+  String get transportation_toLabel => 'Arrival';
+
+  @override
+  String get transportation_dateLabel => 'Date';
+
+  @override
+  String get transportation_selectPlaceholder => 'Select';
+
+  @override
+  String get transportation_search => 'Search Transfers';
+
+  @override
+  String get transportation_resultsTitle => 'Available Transfers';
+
+  @override
+  String get transportation_choose => 'Choose';
+
+  @override
+  String get transportation_full => 'Full';
+
+  @override
+  String get transportation_booked => 'Booked';
+
+  @override
+  String get transportation_noResults =>
+      'No transfers run between these places on the day you picked.';
+
+  @override
+  String get transportation_noDestinations =>
+      'No transfers have been set up for this event yet.';
+
+  @override
+  String get transportation_loadError =>
+      'Transfers couldn\'t be loaded. Please try again.';
+
+  @override
+  String get transportation_bookSuccess => 'Your seat is booked.';
+
+  @override
+  String get transportation_bookFull => 'This transfer just filled up.';
+
+  @override
+  String get transportation_bookError =>
+      'Your seat couldn\'t be booked. Please try again.';
+
+  @override
+  String get support_title => 'Contact';
+
+  @override
+  String get support_emptyTitle => 'No requests yet';
+
+  @override
+  String get support_empty =>
+      'Ask the event team anything — they\'ll answer right here.';
+
+  @override
+  String get support_loadError =>
+      'Your requests couldn\'t be loaded. Please try again.';
+
+  @override
+  String get support_newRequest => 'New request';
+
+  @override
+  String get support_subjectLabel => 'Subject';
+
+  @override
+  String get support_subjectHint => 'What is it about?';
+
+  @override
+  String get support_messageLabel => 'Message';
+
+  @override
+  String get support_messageHint => 'Tell us what you need…';
+
+  @override
+  String get support_sendRequest => 'Send request';
+
+  @override
+  String get support_subjectRequired =>
+      'Add a subject so we know what it\'s about.';
+
+  @override
+  String get support_messageRequired => 'Write a message before sending.';
+
+  @override
+  String get support_createError =>
+      'Your request couldn\'t be sent. Please try again.';
+
+  @override
+  String get support_sendError =>
+      'Your message couldn\'t be sent. Please try again.';
+
+  @override
+  String get support_chatHint => 'Write a message…';
+
+  @override
+  String get support_chatSend => 'Send message';
+
+  @override
+  String get support_chatEmpty => 'No messages in this request yet.';
+
+  @override
+  String get support_requestMissing => 'This request is no longer available.';
+
+  @override
+  String get support_statusAwaiting => 'Waiting for a reply';
+
+  @override
+  String get support_statusAnswered => 'Answered';
+
+  @override
+  String get support_statusResolved => 'Resolved';
+
+  @override
+  String get support_resolvedNotice =>
+      'This request was marked resolved. Send a message to reopen it.';
+
+  @override
+  String get support_teamName => 'Support Team';
+
+  @override
+  String get support_you => 'You';
+
+  @override
+  String landing_greeting(String name) {
+    return 'Hi, $name';
+  }
+
+  @override
+  String community_mediaLimit(int count) {
+    return 'A post holds up to $count photos and videos.';
+  }
+
+  @override
   String landing_enjoyDay(String day, String eventName) {
     return 'Enjoy the $day day of $eventName';
+  }
+
+  @override
+  String get flights_title => 'Flight Reservation';
+
+  @override
+  String get flights_preferenceTitle => 'Your Travel Preference';
+
+  @override
+  String get flights_preferenceSelf => 'By My Own Means';
+
+  @override
+  String get flights_preferenceFlight => 'By Plane';
+
+  @override
+  String get flights_arrivalSection => 'Arrival';
+
+  @override
+  String get flights_departureSection => 'Return';
+
+  @override
+  String get flights_arrivalCityLabel => 'City You\'ll Depart From';
+
+  @override
+  String get flights_departureCityLabel => 'City You\'ll Return To';
+
+  @override
+  String get flights_flightLabel => 'Flight';
+
+  @override
+  String get flights_selectPlaceholder => '-Select-';
+
+  @override
+  String get flights_continue => 'Continue';
+
+  @override
+  String get flights_reviewIntro =>
+      'Check that your details are correct before continuing.';
+
+  @override
+  String get flights_personalTitle => 'Personal Information';
+
+  @override
+  String get flights_fullName => 'Full Name';
+
+  @override
+  String get flights_birthDate => 'Date of Birth';
+
+  @override
+  String get flights_gender => 'Gender';
+
+  @override
+  String get flights_genderMale => 'Male';
+
+  @override
+  String get flights_genderFemale => 'Female';
+
+  @override
+  String get flights_identityNumber => 'ID Number';
+
+  @override
+  String get flights_identitySerial => 'ID Serial Number';
+
+  @override
+  String get flights_arrivalDetailsTitle => 'Arrival Flight Details';
+
+  @override
+  String get flights_departureDetailsTitle => 'Return Flight Details';
+
+  @override
+  String get flights_routeLabel => 'City-Airport';
+
+  @override
+  String get flights_flightRowLabel => 'Flight';
+
+  @override
+  String get flights_dateTimeLabel => 'Date-Time';
+
+  @override
+  String get flights_pnrLabel => 'Reservation Code (PNR)';
+
+  @override
+  String get flights_confirm => 'Confirm Flight';
+
+  @override
+  String get flights_notProvided => '-';
+
+  @override
+  String get flights_successTitle => 'Your Flight Is Reserved!';
+
+  @override
+  String get flights_successBody =>
+      'Your flight details will be sent to your email address. Don\'t forget to check in before boarding.';
+
+  @override
+  String get flights_successHint =>
+      'You can also find your flight details in your profile.';
+
+  @override
+  String get flights_successAction => 'Continue to the App';
+
+  @override
+  String get flights_pendingBanner =>
+      'Your preferences are saved. You will be able to see your flight details once they are uploaded to the application.';
+
+  @override
+  String get flights_savedSelfTitle => 'You\'re Travelling by Your Own Means';
+
+  @override
+  String get flights_savedSelfBody =>
+      'We won\'t book anything for you. You can change this while your request is still open.';
+
+  @override
+  String get flights_edit => 'Edit My Request';
+
+  @override
+  String get flights_full => 'Full';
+
+  @override
+  String get flights_chosen => 'Chosen';
+
+  @override
+  String get flights_noFlights =>
+      'No flights have been published for this event yet.';
+
+  @override
+  String get flights_noFlightsForCity => 'No flights from here yet.';
+
+  @override
+  String get flights_loadError =>
+      'Flights couldn\'t be loaded. Please try again.';
+
+  @override
+  String get flights_incompleteLeg =>
+      'Please choose a flight for each city you picked, or clear the city.';
+
+  @override
+  String get flights_noLegChosen => 'Please choose at least one flight.';
+
+  @override
+  String get flights_submitError =>
+      'Your request couldn\'t be saved. Please try again.';
+
+  @override
+  String get flights_submitFull =>
+      'That flight just filled up. Please choose another.';
+
+  @override
+  String get flights_lockedError =>
+      'Your request is already being processed and can no longer be changed.';
+
+  @override
+  String flights_seatsLeft(int count) {
+    return '$count seats left';
   }
 }

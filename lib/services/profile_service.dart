@@ -52,6 +52,31 @@ class ProfileService {
         social.linkedIn != null;
   }
 
+  /// Writes the parts of their own profile a participant is allowed to change:
+  /// the bio that introduces them, and where to find them online. Everything
+  /// else on the document — their name, title, company and contact details —
+  /// comes from the organisers, so it is not editable in the app.
+  ///
+  /// Each argument left out is left alone, so saving a bio does not have to
+  /// carry the links along with it.
+  Future<void> updateOwnProfile({
+    String? description,
+    ProfileSocialMedia? socialMedia,
+  }) async {
+    final currentUser = _authService.currentUser;
+    if (currentUser == null) {
+      throw Exception('User must be authenticated to edit their profile');
+    }
+
+    final fields = <String, dynamic>{
+      if (description != null) 'description': description.trim(),
+      if (socialMedia != null) 'socialMedia': socialMedia.toJson(),
+    };
+    if (fields.isEmpty) return;
+
+    await _profileRepository.updateFields(currentUser.uid, fields);
+  }
+
   /// Uploads a profile image and updates the user's profile document
   /// Returns the download URL of the uploaded image
   Future<String> uploadProfileImage(File imageFile) async {

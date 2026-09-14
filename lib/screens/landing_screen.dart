@@ -146,8 +146,9 @@ class _CommunityUpdates extends ConsumerWidget {
   /// The gap between two cards.
   static const double _gap = 12;
 
-  /// How much caption a card previews before ellipsising.
-  static const int _captionMaxLines = 3;
+  /// How much caption a card previews before ellipsising. One line, so every
+  /// card in the row is exactly the same height.
+  static const int _captionMaxLines = 1;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -164,8 +165,9 @@ class _CommunityUpdates extends ConsumerWidget {
             final cardWidth = constraints.maxWidth * _cardWidthFactor;
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              // Cards differ in height (a post can have no caption at all), so
-              // they hang from the top rather than centring on the tallest.
+              // The capped caption makes every card the same height, but they
+              // hang from the top regardless so a card that ever fell short
+              // lines up at the header rather than floating.
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 spacing: _gap,

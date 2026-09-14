@@ -31,6 +31,20 @@ class ProfileRepository extends BaseRepository<ProfileModel> {
     }
   }
 
+  /// Writes just [fields] onto `users/{userId}`, leaving everything else on the
+  /// document alone — the app only ever edits the handful of fields a
+  /// participant owns, while the rest is the admin panel's to fill in.
+  Future<void> updateFields(String userId, Map<String, dynamic> fields) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection(collectionPath)
+          .doc(userId)
+          .update({...fields, 'updatedAt': FieldValue.serverTimestamp()});
+    } catch (e) {
+      throw Exception('Failed to update profile: $e');
+    }
+  }
+
   /// Updates a user's profile with the new image URL
   Future<void> updateProfileImage(String userId, String imageUrl) async {
     try {

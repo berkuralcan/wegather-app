@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:wegather_app/community_widgets/community_media_carousel.dart';
+import 'package:wegather_app/community_widgets/post_more_button.dart';
 import 'package:wegather_app/l10n/app_localizations.dart';
 import 'package:wegather_app/models/community_model.dart';
 import 'package:wegather_app/models/gallery_media.dart';
@@ -84,7 +85,7 @@ void main() {
             builder: (_, _) => const PostDetailScreen(postId: postId),
           ),
           GoRoute(
-            path: '/profile/:profileId',
+            path: '/user/:profileId',
             name: 'profile',
             builder: (_, state) => Scaffold(
               body: Text('profile:${state.pathParameters['profileId']}'),
@@ -132,8 +133,22 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('This post is no longer available.'), findsOne);
-    // Nothing to comment on, so there is nothing to comment with either.
+    // Nothing to comment on, so there is nothing to comment with either — and
+    // nothing to report.
     expect(find.text('Add a comment…'), findsNothing);
+    expect(find.byType(PostMoreButton), findsNothing);
+  });
+
+  testWidgets("the bar carries the post's options", (tester) async {
+    await tester.pumpWidget(wrap(loadedPost: post()));
+    await tester.pumpAndSettle();
+
+    // The feed hangs these off the card; here they are in the app bar, so they
+    // stay reachable however far down the thread has been scrolled.
+    await tester.tap(find.byType(PostMoreButton));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Report post'), findsOne);
   });
 
   testWidgets('carries a carousel for a post with several media', (

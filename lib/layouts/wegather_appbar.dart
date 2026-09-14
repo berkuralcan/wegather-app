@@ -17,12 +17,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// edge by the same 16px the app's content uses.
   final Widget? trailing;
 
+  /// Whether the title sits in the middle of the bar. A screen reached by
+  /// pushing it is centred, the way a pushed page's title is everywhere in the
+  /// app; a screen that is a tab in its own right — your own profile — sets
+  /// this false and starts its title at the leading edge instead.
+  final bool centerTitle;
+
   const CustomAppBar({
     super.key,
     required this.title,
     this.onBackPressed,
     this.toolbarHeight = 96,
     this.trailing,
+    this.centerTitle = true,
   });
 
   @override
@@ -32,7 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
-        textAlign: TextAlign.center,
+        textAlign: centerTitle ? TextAlign.center : TextAlign.start,
         style: AppTextStyles.appBarTextStyle,
       ),
       leading: showBack
@@ -57,7 +64,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: Center(child: trailing),
               ),
             ],
-      centerTitle: true,
+      centerTitle: centerTitle,
       toolbarHeight: toolbarHeight,
       // Fully transparent so the app background gradient shows through, even
       // when content scrolls under the bar (Material 3 tints it otherwise).

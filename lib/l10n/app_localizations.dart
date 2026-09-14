@@ -179,7 +179,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeIcon_information.
   ///
   /// In en, this message translates to:
-  /// **'Important Information'**
+  /// **'Information'**
   String get homeIcon_information;
 
   /// No description provided for @homeIcon_rules.
@@ -319,6 +319,234 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Nothing has been posted yet.'**
   String get profile_postsEmpty;
+
+  /// The title of the profile screen when the user is looking at their own profile
+  ///
+  /// In en, this message translates to:
+  /// **'Your Profile'**
+  String get profile_myProfileTitle;
+
+  /// Shown while a newly picked profile photo is being uploaded
+  ///
+  /// In en, this message translates to:
+  /// **'Uploading your photo…'**
+  String get profile_photoUploading;
+
+  /// Confirmation shown once the new profile photo is stored
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile photo has been updated.'**
+  String get profile_photoUpdated;
+
+  /// Shown when picking or uploading a profile photo failed
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile photo could not be updated.'**
+  String get profile_photoError;
+
+  /// Shown in place of the bio on your own profile while you have not written one
+  ///
+  /// In en, this message translates to:
+  /// **'Add a description here and share your social media accounts so the other attendees can get to know you.'**
+  String get profile_descriptionEmpty;
+
+  /// The button that hands your profile to the platform's share sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Share Profile'**
+  String get profile_shareProfile;
+
+  /// Shown when the share sheet could not be opened
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile could not be shared.'**
+  String get profile_shareError;
+
+  /// The button that opens the bio for editing, on your own profile
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get profile_edit;
+
+  /// The title of the screen where you edit your bio and your links
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get profile_editTitle;
+
+  /// The label of the bio field on the edit profile screen
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get profile_descriptionLabel;
+
+  /// The placeholder of the bio field on the edit profile screen
+  ///
+  /// In en, this message translates to:
+  /// **'Tell the other attendees about yourself'**
+  String get profile_descriptionHint;
+
+  /// The heading of the social links section on the edit profile screen
+  ///
+  /// In en, this message translates to:
+  /// **'Social Media'**
+  String get profile_socialMedia;
+
+  /// The placeholder of the LinkedIn field
+  ///
+  /// In en, this message translates to:
+  /// **'linkedin.com/in/your-profile'**
+  String get profile_linkedInHint;
+
+  /// The placeholder of the Instagram field
+  ///
+  /// In en, this message translates to:
+  /// **'instagram.com/your-profile'**
+  String get profile_instagramHint;
+
+  /// The placeholder of the website field
+  ///
+  /// In en, this message translates to:
+  /// **'yourwebsite.com'**
+  String get profile_websiteHint;
+
+  /// The placeholder of the portfolio field
+  ///
+  /// In en, this message translates to:
+  /// **'yourportfolio.com'**
+  String get profile_portfolioHint;
+
+  /// The button that writes profile changes
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get profile_save;
+
+  /// The button that abandons profile changes
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get profile_cancel;
+
+  /// Confirmation shown after profile changes are written
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile has been updated.'**
+  String get profile_saved;
+
+  /// Shown when writing profile changes failed
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile could not be saved.'**
+  String get profile_saveError;
+
+  /// Shown when the profile document could not be read
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile could not be loaded.'**
+  String get profile_loadError;
+
+  /// Shown when there is no profile document for the requested user
+  ///
+  /// In en, this message translates to:
+  /// **'Profile not found.'**
+  String get profile_notFound;
+
+  /// The button at the foot of your own profile that signs you out
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Out'**
+  String get profile_signOut;
+
+  /// The profile menu row that opens the details the organisers hold about you
+  ///
+  /// In en, this message translates to:
+  /// **'My Personal Information'**
+  String get profile_menuInformation;
+
+  /// The profile menu row that opens the code identifying you at the event
+  ///
+  /// In en, this message translates to:
+  /// **'My QR Code'**
+  String get profile_menuQrCode;
+
+  /// The profile menu row for where the user is staying
+  ///
+  /// In en, this message translates to:
+  /// **'My Accommodation Details'**
+  String get profile_menuAccommodation;
+
+  /// The profile menu row for the user's transfers
+  ///
+  /// In en, this message translates to:
+  /// **'My Transportation Details'**
+  String get profile_menuTransportation;
+
+  /// The profile menu row for the user's flights
+  ///
+  /// In en, this message translates to:
+  /// **'My Flight Details'**
+  String get profile_menuFlights;
+
+  /// The line under the QR code explaining what it is for
+  ///
+  /// In en, this message translates to:
+  /// **'Show this code to the event team to identify yourself.'**
+  String get profile_qrHint;
+
+  /// Placeholder for the profile sections that are not built yet
+  ///
+  /// In en, this message translates to:
+  /// **'This section will be here soon.'**
+  String get profile_comingSoon;
+
+  /// The heading above the user's name, title and contact details
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Info'**
+  String get profile_personalInfo;
+
+  /// The heading above the user's links
+  ///
+  /// In en, this message translates to:
+  /// **'Social Profiles'**
+  String get profile_socialProfiles;
+
+  /// The label of the name row
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get profile_fullName;
+
+  /// The label of the job title row
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get profile_jobTitle;
+
+  /// The label of the company row
+  ///
+  /// In en, this message translates to:
+  /// **'Company'**
+  String get profile_company;
+
+  /// The label of the email row
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get profile_emailAddress;
+
+  /// The label of the phone number row
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Number'**
+  String get profile_phone;
+
+  /// Shown on the personal information screen when every field is unset
+  ///
+  /// In en, this message translates to:
+  /// **'There is no personal information on your profile yet.'**
+  String get profile_infoEmpty;
 
   /// The forgot password link on the login screen
   ///
@@ -752,12 +980,6 @@ abstract class AppLocalizations {
   /// **'Cancel'**
   String get gallery_addCancel;
 
-  /// The greeting at the top of the landing (home) screen, with the user's first name
-  ///
-  /// In en, this message translates to:
-  /// **'Hi, {name}'**
-  String landing_greeting(String name);
-
   /// The call to action under the latest announcement on the landing screen
   ///
   /// In en, this message translates to:
@@ -835,12 +1057,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add at least one photo or video to post.'**
   String get community_mediaRequired;
-
-  /// Shown when the user picks more media than one post can hold
-  ///
-  /// In en, this message translates to:
-  /// **'A post holds up to {count} photos and videos.'**
-  String community_mediaLimit(int count);
 
   /// Shown when the camera or the library picker fails on the create-post screen
   ///
@@ -986,11 +1202,545 @@ abstract class AppLocalizations {
   /// **'This couldn\'t be reported. Please try again.'**
   String get community_reportError;
 
+  /// Title of the internal transfers screen
+  ///
+  /// In en, this message translates to:
+  /// **'Transfers'**
+  String get transportation_title;
+
+  /// Picker label for where a transfer leaves from
+  ///
+  /// In en, this message translates to:
+  /// **'Departure'**
+  String get transportation_fromLabel;
+
+  /// Picker label for where a transfer arrives
+  ///
+  /// In en, this message translates to:
+  /// **'Arrival'**
+  String get transportation_toLabel;
+
+  /// Picker label for the transfer day
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get transportation_dateLabel;
+
+  /// Placeholder shown in an empty picker
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get transportation_selectPlaceholder;
+
+  /// Button that runs the transfer search
+  ///
+  /// In en, this message translates to:
+  /// **'Search Transfers'**
+  String get transportation_search;
+
+  /// Heading above the matching transfers
+  ///
+  /// In en, this message translates to:
+  /// **'Available Transfers'**
+  String get transportation_resultsTitle;
+
+  /// Button that takes a seat on a transfer
+  ///
+  /// In en, this message translates to:
+  /// **'Choose'**
+  String get transportation_choose;
+
+  /// Shown on a transfer whose seats have run out
+  ///
+  /// In en, this message translates to:
+  /// **'Full'**
+  String get transportation_full;
+
+  /// Shown on a transfer the viewer already has a seat on
+  ///
+  /// In en, this message translates to:
+  /// **'Booked'**
+  String get transportation_booked;
+
+  /// Empty state when no transfer matches the search
+  ///
+  /// In en, this message translates to:
+  /// **'No transfers run between these places on the day you picked.'**
+  String get transportation_noResults;
+
+  /// Empty state when the event has no transfer destinations
+  ///
+  /// In en, this message translates to:
+  /// **'No transfers have been set up for this event yet.'**
+  String get transportation_noDestinations;
+
+  /// Error shown when the transfers fail to load
+  ///
+  /// In en, this message translates to:
+  /// **'Transfers couldn\'t be loaded. Please try again.'**
+  String get transportation_loadError;
+
+  /// Confirmation shown after a seat is taken
+  ///
+  /// In en, this message translates to:
+  /// **'Your seat is booked.'**
+  String get transportation_bookSuccess;
+
+  /// Error shown when a transfer filled up before the tap
+  ///
+  /// In en, this message translates to:
+  /// **'This transfer just filled up.'**
+  String get transportation_bookFull;
+
+  /// Error shown when taking a seat fails
+  ///
+  /// In en, this message translates to:
+  /// **'Your seat couldn\'t be booked. Please try again.'**
+  String get transportation_bookError;
+
+  /// Title of the support requests screen
+  ///
+  /// In en, this message translates to:
+  /// **'Contact'**
+  String get support_title;
+
+  /// Heading of the support empty state
+  ///
+  /// In en, this message translates to:
+  /// **'No requests yet'**
+  String get support_emptyTitle;
+
+  /// Body of the support empty state
+  ///
+  /// In en, this message translates to:
+  /// **'Ask the event team anything — they\'ll answer right here.'**
+  String get support_empty;
+
+  /// Error shown when the support requests fail to load
+  ///
+  /// In en, this message translates to:
+  /// **'Your requests couldn\'t be loaded. Please try again.'**
+  String get support_loadError;
+
+  /// Button that opens the new support request form
+  ///
+  /// In en, this message translates to:
+  /// **'New request'**
+  String get support_newRequest;
+
+  /// Field label for a support request's subject
+  ///
+  /// In en, this message translates to:
+  /// **'Subject'**
+  String get support_subjectLabel;
+
+  /// Placeholder for the subject field
+  ///
+  /// In en, this message translates to:
+  /// **'What is it about?'**
+  String get support_subjectHint;
+
+  /// Field label for a support request's message
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get support_messageLabel;
+
+  /// Placeholder for the message field
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us what you need…'**
+  String get support_messageHint;
+
+  /// Button that submits a new support request
+  ///
+  /// In en, this message translates to:
+  /// **'Send request'**
+  String get support_sendRequest;
+
+  /// Validation message for an empty subject
+  ///
+  /// In en, this message translates to:
+  /// **'Add a subject so we know what it\'s about.'**
+  String get support_subjectRequired;
+
+  /// Validation message for an empty message
+  ///
+  /// In en, this message translates to:
+  /// **'Write a message before sending.'**
+  String get support_messageRequired;
+
+  /// Error shown when creating a support request fails
+  ///
+  /// In en, this message translates to:
+  /// **'Your request couldn\'t be sent. Please try again.'**
+  String get support_createError;
+
+  /// Error shown when sending a support message fails
+  ///
+  /// In en, this message translates to:
+  /// **'Your message couldn\'t be sent. Please try again.'**
+  String get support_sendError;
+
+  /// Placeholder for the message box in a support thread
+  ///
+  /// In en, this message translates to:
+  /// **'Write a message…'**
+  String get support_chatHint;
+
+  /// Accessibility label for the send button in a support thread
+  ///
+  /// In en, this message translates to:
+  /// **'Send message'**
+  String get support_chatSend;
+
+  /// Empty state inside a support thread with no messages
+  ///
+  /// In en, this message translates to:
+  /// **'No messages in this request yet.'**
+  String get support_chatEmpty;
+
+  /// Shown when a support request can no longer be opened
+  ///
+  /// In en, this message translates to:
+  /// **'This request is no longer available.'**
+  String get support_requestMissing;
+
+  /// Support request status: no reply yet
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for a reply'**
+  String get support_statusAwaiting;
+
+  /// Support request status: the team has replied
+  ///
+  /// In en, this message translates to:
+  /// **'Answered'**
+  String get support_statusAnswered;
+
+  /// Support request status: closed
+  ///
+  /// In en, this message translates to:
+  /// **'Resolved'**
+  String get support_statusResolved;
+
+  /// Notice shown at the top of a resolved support thread
+  ///
+  /// In en, this message translates to:
+  /// **'This request was marked resolved. Send a message to reopen it.'**
+  String get support_resolvedNotice;
+
+  /// Sender name shown on messages from the event team
+  ///
+  /// In en, this message translates to:
+  /// **'Support Team'**
+  String get support_teamName;
+
+  /// Sender name shown on the viewer's own messages
+  ///
+  /// In en, this message translates to:
+  /// **'You'**
+  String get support_you;
+
+  /// The greeting at the top of the landing (home) screen, with the user's first name
+  ///
+  /// In en, this message translates to:
+  /// **'Hi, {name}'**
+  String landing_greeting(String name);
+
+  /// Shown when the user picks more media than one post can hold
+  ///
+  /// In en, this message translates to:
+  /// **'A post holds up to {count} photos and videos.'**
+  String community_mediaLimit(int count);
+
   /// Fallback banner text over the event's featured image when the event has no slogan. {day} is a locale-formatted day-of-event token (an English ordinal like "2nd"; a plain number in Turkish).
   ///
   /// In en, this message translates to:
   /// **'Enjoy the {day} day of {eventName}'**
   String landing_enjoyDay(String day, String eventName);
+
+  /// Title of the external travel (flight reservation) screen
+  ///
+  /// In en, this message translates to:
+  /// **'Flight Reservation'**
+  String get flights_title;
+
+  /// Heading of the how-will-you-travel choice
+  ///
+  /// In en, this message translates to:
+  /// **'Your Travel Preference'**
+  String get flights_preferenceTitle;
+
+  /// Choice: the participant arranges their own travel
+  ///
+  /// In en, this message translates to:
+  /// **'By My Own Means'**
+  String get flights_preferenceSelf;
+
+  /// Choice: the participant wants a flight booked for them
+  ///
+  /// In en, this message translates to:
+  /// **'By Plane'**
+  String get flights_preferenceFlight;
+
+  /// Heading of the leg that brings a participant to the event
+  ///
+  /// In en, this message translates to:
+  /// **'Arrival'**
+  String get flights_arrivalSection;
+
+  /// Heading of the leg that takes a participant home
+  ///
+  /// In en, this message translates to:
+  /// **'Return'**
+  String get flights_departureSection;
+
+  /// Picker label for the participant's home city on the way in
+  ///
+  /// In en, this message translates to:
+  /// **'City You\'ll Depart From'**
+  String get flights_arrivalCityLabel;
+
+  /// Picker label for the participant's home city on the way back
+  ///
+  /// In en, this message translates to:
+  /// **'City You\'ll Return To'**
+  String get flights_departureCityLabel;
+
+  /// Picker label for choosing a published flight
+  ///
+  /// In en, this message translates to:
+  /// **'Flight'**
+  String get flights_flightLabel;
+
+  /// Placeholder shown in an empty picker
+  ///
+  /// In en, this message translates to:
+  /// **'-Select-'**
+  String get flights_selectPlaceholder;
+
+  /// Button that moves from the form to the review step
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get flights_continue;
+
+  /// Instruction above the review summary
+  ///
+  /// In en, this message translates to:
+  /// **'Check that your details are correct before continuing.'**
+  String get flights_reviewIntro;
+
+  /// Heading of the passenger details block
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Information'**
+  String get flights_personalTitle;
+
+  /// Passenger field label
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get flights_fullName;
+
+  /// Passenger field label
+  ///
+  /// In en, this message translates to:
+  /// **'Date of Birth'**
+  String get flights_birthDate;
+
+  /// Passenger field label
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get flights_gender;
+
+  /// Passenger gender as printed on a ticket
+  ///
+  /// In en, this message translates to:
+  /// **'Male'**
+  String get flights_genderMale;
+
+  /// Passenger gender as printed on a ticket
+  ///
+  /// In en, this message translates to:
+  /// **'Female'**
+  String get flights_genderFemale;
+
+  /// Passenger field label for the number on their travel document
+  ///
+  /// In en, this message translates to:
+  /// **'ID Number'**
+  String get flights_identityNumber;
+
+  /// Passenger field label for a TR ID card's serial number
+  ///
+  /// In en, this message translates to:
+  /// **'ID Serial Number'**
+  String get flights_identitySerial;
+
+  /// Heading of the arrival leg summary
+  ///
+  /// In en, this message translates to:
+  /// **'Arrival Flight Details'**
+  String get flights_arrivalDetailsTitle;
+
+  /// Heading of the return leg summary
+  ///
+  /// In en, this message translates to:
+  /// **'Return Flight Details'**
+  String get flights_departureDetailsTitle;
+
+  /// Summary row label for a leg's route
+  ///
+  /// In en, this message translates to:
+  /// **'City-Airport'**
+  String get flights_routeLabel;
+
+  /// Summary row label for the airline and flight number
+  ///
+  /// In en, this message translates to:
+  /// **'Flight'**
+  String get flights_flightRowLabel;
+
+  /// Summary row label for when a flight leaves
+  ///
+  /// In en, this message translates to:
+  /// **'Date-Time'**
+  String get flights_dateTimeLabel;
+
+  /// Summary row label for the booking reference
+  ///
+  /// In en, this message translates to:
+  /// **'Reservation Code (PNR)'**
+  String get flights_pnrLabel;
+
+  /// Button that submits the travel request
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Flight'**
+  String get flights_confirm;
+
+  /// Placeholder shown in place of a detail the participant hasn't given yet
+  ///
+  /// In en, this message translates to:
+  /// **'-'**
+  String get flights_notProvided;
+
+  /// Heading of the confirmation screen
+  ///
+  /// In en, this message translates to:
+  /// **'Your Flight Is Reserved!'**
+  String get flights_successTitle;
+
+  /// First paragraph of the confirmation screen
+  ///
+  /// In en, this message translates to:
+  /// **'Your flight details will be sent to your email address. Don\'t forget to check in before boarding.'**
+  String get flights_successBody;
+
+  /// Second paragraph of the confirmation screen
+  ///
+  /// In en, this message translates to:
+  /// **'You can also find your flight details in your profile.'**
+  String get flights_successHint;
+
+  /// Button that leaves the confirmation screen
+  ///
+  /// In en, this message translates to:
+  /// **'Continue to the App'**
+  String get flights_successAction;
+
+  /// Notice shown while a request is submitted but not yet ticketed
+  ///
+  /// In en, this message translates to:
+  /// **'Your preferences are saved. You will be able to see your flight details once they are uploaded to the application.'**
+  String get flights_pendingBanner;
+
+  /// Heading shown to someone who opted out of a booked flight
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re Travelling by Your Own Means'**
+  String get flights_savedSelfTitle;
+
+  /// Body shown to someone who opted out of a booked flight
+  ///
+  /// In en, this message translates to:
+  /// **'We won\'t book anything for you. You can change this while your request is still open.'**
+  String get flights_savedSelfBody;
+
+  /// Button that reopens a submitted request for editing
+  ///
+  /// In en, this message translates to:
+  /// **'Edit My Request'**
+  String get flights_edit;
+
+  /// Shown on a flight whose seats have run out
+  ///
+  /// In en, this message translates to:
+  /// **'Full'**
+  String get flights_full;
+
+  /// Shown on the flight the participant already picked
+  ///
+  /// In en, this message translates to:
+  /// **'Chosen'**
+  String get flights_chosen;
+
+  /// Empty state when the event has no published flights
+  ///
+  /// In en, this message translates to:
+  /// **'No flights have been published for this event yet.'**
+  String get flights_noFlights;
+
+  /// Empty state in the flight picker for a city with no flights
+  ///
+  /// In en, this message translates to:
+  /// **'No flights from here yet.'**
+  String get flights_noFlightsForCity;
+
+  /// Error shown when the flights or the request fail to load
+  ///
+  /// In en, this message translates to:
+  /// **'Flights couldn\'t be loaded. Please try again.'**
+  String get flights_loadError;
+
+  /// Validation message when a leg has a city but no flight
+  ///
+  /// In en, this message translates to:
+  /// **'Please choose a flight for each city you picked, or clear the city.'**
+  String get flights_incompleteLeg;
+
+  /// Validation message when flying but no leg is complete
+  ///
+  /// In en, this message translates to:
+  /// **'Please choose at least one flight.'**
+  String get flights_noLegChosen;
+
+  /// Error shown when submitting the request fails
+  ///
+  /// In en, this message translates to:
+  /// **'Your request couldn\'t be saved. Please try again.'**
+  String get flights_submitError;
+
+  /// Error shown when a chosen flight ran out of seats
+  ///
+  /// In en, this message translates to:
+  /// **'That flight just filled up. Please choose another.'**
+  String get flights_submitFull;
+
+  /// Error shown when editing a request the panel has taken over
+  ///
+  /// In en, this message translates to:
+  /// **'Your request is already being processed and can no longer be changed.'**
+  String get flights_lockedError;
+
+  /// How many seats remain on a capacity-limited flight
+  ///
+  /// In en, this message translates to:
+  /// **'{count} seats left'**
+  String flights_seatsLeft(int count);
 }
 
 class _AppLocalizationsDelegate

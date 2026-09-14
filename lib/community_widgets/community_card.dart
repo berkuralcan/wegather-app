@@ -4,17 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../config/app_config.dart';
 import '../config/text_styles.dart';
-import '../l10n/app_localizations.dart';
 import '../models/community_model.dart';
 import '../providers/access_providers.dart';
 import '../providers/auth_providers.dart';
 import '../providers/community_providers.dart';
-import '../reusableWidgets/liquid_snackbar.dart';
 import 'community_author_row.dart';
 import 'community_media_carousel.dart';
 import 'mention_text.dart';
-import 'post_options_sheet.dart';
-import 'report_post_sheet.dart';
+import 'post_more_button.dart';
 
 /// One post in the feed: an author header, the caption (with @mentions picked
 /// out), the media, then the like and comment tallies.
@@ -49,9 +46,14 @@ class CommunityCard extends ConsumerStatefulWidget {
   final VoidCallback? onAuthorTap;
 
   /// Caps the caption, which is what makes the card's height predictable — the
-  /// landing screen's strip sets it so every card in the row is the same size.
-  /// Null (the feed) shows the caption whole.
+  /// landing screen's strip sets it so every card in the row is the same size,
+  /// and a post with no caption still holds the capped space. Null (the feed)
+  /// shows the caption whole.
   final int? captionMaxLines;
+
+  /// The corner radius of the media. Public so a post drawn outside the feed —
+  /// the post's own screen — rounds its media the same way.
+  static const double mediaRadius = 16;
 
   @override
   ConsumerState<CommunityCard> createState() => _CommunityCardState();
@@ -59,9 +61,6 @@ class CommunityCard extends ConsumerStatefulWidget {
 
 class _CommunityCardState extends ConsumerState<CommunityCard>
     with SingleTickerProviderStateMixin {
-  /// The corner radius of the media.
-  static const double _mediaRadius = 16;
-
   /// The heart that swells over the media on a double tap. It acknowledges the
   /// gesture rather than the result, so it plays whether or not the tap changed
   /// anything — a double tap on an already-liked post still answers.
@@ -89,11 +88,6 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
   /// Guards a second tap landing while the first write is still in flight,
   /// which would toggle the like twice and leave the tally off by one.
   bool _isToggling = false;
-
-  /// Reported from this card in this session. The post's own flag covers a
-  /// report someone else made; this covers the one just made here, which the
-  /// paged feed's copy of the post doesn't know about.
-  bool _reported = false;
 
   @override
   void dispose() {
@@ -136,66 +130,6 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
     _toggleLike(likeOnly: true);
   }
 
-  /// The ellipsis: what can be done with the post beyond liking it.
-  Future<void> _openOptions() async {
-    final option = await showPostOptionsSheet(
-      context,
-      isReported: widget.post.isReported || _reported,
-    );
-    if (option == null || !mounted) return;
-    switch (option) {
-      case PostOption.report:
-        await _report();
-    }
-  }
-
-  /// Asks for confirmation, then flags the post for moderation — the gallery's
-  /// report flow, on a post instead of a photo.
-  Future<void> _report() async {
-    final l10n = AppLocalizations.of(context)!;
-    final postId = widget.post.id;
-    final eventId = ref.read(selectedEventIdProvider);
-    final uid = ref.read(currentUserProvider)?.uid;
-
-    final reason = await showReportPostSheet(context);
-    if (reason == null || !mounted) return;
-
-    if (eventId == null || uid == null) {
-      showLiquidSnackBar(
-        context,
-        l10n.community_reportError,
-        icon: Icons.error,
-        iconColor: Colors.red,
-      );
-      return;
-    }
-
-    try {
-      await ref
-          .read(communityServiceProvider)
-          .reportPost(eventId, postId, reportedBy: uid, reason: reason);
-      if (!mounted) return;
-      // Nothing in the app hides a reported post, so the feed is left alone;
-      // this only stops the same post being reported twice from this card.
-      setState(() => _reported = true);
-      showLiquidSnackBar(
-        context,
-        l10n.community_reportSuccess,
-        icon: Icons.check_circle,
-        iconColor: Colors.green,
-      );
-    } catch (error) {
-      if (mounted) {
-        showLiquidSnackBar(
-          context,
-          '${l10n.community_reportError}\n$error',
-          icon: Icons.error,
-          iconColor: Colors.red,
-        );
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final post = widget.post;
@@ -221,7 +155,10 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
               onTap: widget.onAuthorTap,
             ),
           ),
-          if (post.caption.trim().isNotEmpty)
+          // A capped caption holds its slot even when the post has none, so a
+          // card without a caption doesn't ride up out of line with the rest of
+          // the strip. Uncapped (the feed), an absent caption takes no space.
+          if (post.caption.trim().isNotEmpty || widget.captionMaxLines != null)
             MentionText(
               text: post.caption,
               style: AppTextStyles.weGatherParagraphTextStyle,
@@ -230,7 +167,7 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
           const SizedBox(height: 12),
           if (post.media.isNotEmpty)
             ClipRRect(
-              borderRadius: BorderRadius.circular(_mediaRadius),
+              borderRadius: BorderRadius.circular(CommunityCard.mediaRadius),
               child: Stack(
                 children: [
                   CommunityMediaCarousel(media: post.media),
@@ -245,7 +182,7 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
               commentCount: post.commentCount,
               isLiked: isLiked,
               onLike: _toggleLike,
-              onMore: _openOptions,
+              trailing: PostMoreButton(post: post),
             ),
           ),
         ],
@@ -281,8 +218,9 @@ class _CommunityCardState extends ConsumerState<CommunityCard>
   }
 }
 
-/// The bar under a post: the like and comment tallies on one side, the ellipsis
-/// that opens the post's options on the other.
+/// The bar under a post: the like and comment tallies on one side, whatever the
+/// caller puts at the other end — the feed card's [PostMoreButton], or nothing
+/// at all where the post's options are reachable elsewhere.
 ///
 /// A liked post gets the solid heart rather than the outline recoloured — at 18
 /// points a tint alone reads as an icon in a slightly different colour, while a
@@ -294,7 +232,7 @@ class CommunityCounts extends StatelessWidget {
     required this.commentCount,
     this.isLiked = false,
     this.onLike,
-    this.onMore,
+    this.trailing,
   });
 
   final int likeCount;
@@ -306,13 +244,11 @@ class CommunityCounts extends StatelessWidget {
   /// Toggles the like. Null leaves the heart as a tally.
   final VoidCallback? onLike;
 
-  /// Opens the post's options. Null leaves the ellipsis off altogether.
-  final VoidCallback? onMore;
+  /// Sits at the far end of the bar. Null leaves the tallies on their own.
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
     return Row(
       children: [
         _CountItem(
@@ -325,29 +261,7 @@ class CommunityCounts extends StatelessWidget {
         ),
         const SizedBox(width: 20),
         _CountItem(asset: 'assets/icons/comment.svg', count: commentCount),
-        if (onMore != null) ...[
-          const Spacer(),
-          GestureDetector(
-            onTap: onMore,
-            // The glyph is three small dots, so the tap target is padded out to
-            // something a thumb can find — inwards only, so the dots stay flush
-            // with the edge of the media above them.
-            behavior: HitTestBehavior.opaque,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 6, 0, 6),
-              child: SvgPicture.asset(
-                'assets/icons/ellipsis.svg',
-                width: 18,
-                height: 18,
-                colorFilter: const ColorFilter.mode(
-                  AppConfig.lightIconColor,
-                  BlendMode.srcIn,
-                ),
-                semanticsLabel: l10n.community_more,
-              ),
-            ),
-          ),
-        ],
+        if (trailing != null) ...[const Spacer(), trailing!],
       ],
     );
   }

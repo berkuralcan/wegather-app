@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:wegather_app/config/app_config.dart';
 import 'package:wegather_app/config/text_styles.dart';
+import 'package:wegather_app/global_widgets/wg_menu_tile.dart';
 import 'package:wegather_app/l10n/app_localizations.dart';
 import 'package:wegather_app/layouts/wegather_appbar.dart';
 import 'package:wegather_app/models/document_model.dart';
@@ -55,41 +55,16 @@ class _DocumentTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return WgMenuTile(
+      icon: Image.asset(
+        _iconPath,
+        width: WgMenuTile.iconSize,
+        height: WgMenuTile.iconSize,
+      ),
+      label: document.fileName,
       onTap: () => Navigator.of(context, rootNavigator: true).push(
         MaterialPageRoute(
           builder: (_) => DocumentDetailScreen(document: document),
-        ),
-      ),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: AppConfig.tipColor,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppConfig.loginPageFormBorderColor),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Row(
-                children: [
-                  Image.asset(_iconPath, width: 24, height: 24),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Text(
-                      document.fileName,
-                      style: AppTextStyles.weGatherLabelTextStyle,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Icon(
-              Icons.chevron_right,
-              color: AppConfig.emphasisColor,
-              size: 28,
-            ),
-          ],
         ),
       ),
     );

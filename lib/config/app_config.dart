@@ -39,6 +39,13 @@ class AppConfig {
   /* Icon Colors */
 
   static const Color lightIconColor = Color.fromARGB(245, 255, 255, 255);
+
+  /// The weight the feed's outline glyphs actually carry: the heart and comment
+  /// artwork is drawn at 64%, so an icon whose artwork is fully opaque — the
+  /// ellipsis behind a post's options — is tinted with this instead of
+  /// [lightIconColor] to sit at the same grey beside them.
+  static const Color secondaryIconColor = Color(0xA3FAFAFA);
+
   static const Color menuIconColor = Color(0xFFB5E4FF);
 
   /* Decor Colors */

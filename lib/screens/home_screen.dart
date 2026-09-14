@@ -37,7 +37,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_rules,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/user/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -45,7 +45,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_hotel,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/user/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -53,7 +53,9 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_flights,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          // Travel to and from the event city — the participant tells the
+          // organisers what they need, and their tickets come back here.
+          context.push('/flights');
         },
       },
       {
@@ -61,7 +63,9 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_transportation,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The event's transfers, scheduled in the admin panel — the one
+          // module where a user books something for themselves.
+          context.push('/transportation');
         },
       },
       {
@@ -87,7 +91,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_security,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/user/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -95,7 +99,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_shake_to_win,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/user/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -103,7 +107,7 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_contests,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          context.push('/user/${user?.uid ?? 'test-id'}');
         },
       },
       {
@@ -111,7 +115,9 @@ class HomeScreen extends ConsumerWidget {
         "title": AppLocalizations.of(context)!.homeIcon_contact,
         "iconSize": Size(41.25, 41.25),
         "onTap": () {
-          context.push('/profile/${user?.uid ?? 'test-id'}');
+          // The user's own support requests, and the conversations they hold —
+          // the one module where an attendee talks directly to the organizers.
+          context.push('/support');
         },
       },
     ];
@@ -123,24 +129,29 @@ class HomeScreen extends ConsumerWidget {
           Image.asset(AppConfig.appLogo),
           SizedBox(height: 48),
           Expanded(
-            child: GridView.count(
+            child: GridView.builder(
               physics:
                   NeverScrollableScrollPhysics(), // TODO - Remove this when we have more items.
-              crossAxisCount: 3,
-              crossAxisSpacing: 17,
-              mainAxisSpacing: 18,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 17,
+                mainAxisSpacing: 18,
+                // 60 icon + 8 gap + 16 label: a fixed extent keeps the tiles
+                // the right height on every screen width.
+                mainAxisExtent: 84,
+              ),
               padding: EdgeInsets.only(left: 53.17, right: 53.17),
               shrinkWrap: true,
-              children: menuItems
-                  .map(
-                    (item) => WgMenuIcon(
-                      iconPath: item["iconPath"],
-                      title: item["title"],
-                      iconSize: item["iconSize"],
-                      onTap: item["onTap"],
-                    ),
-                  )
-                  .toList(),
+              itemCount: menuItems.length,
+              itemBuilder: (context, index) {
+                final item = menuItems[index];
+                return WgMenuIcon(
+                  iconPath: item["iconPath"],
+                  title: item["title"],
+                  iconSize: item["iconSize"],
+                  onTap: item["onTap"],
+                );
+              },
             ),
           ),
         ],

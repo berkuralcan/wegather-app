@@ -49,7 +49,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeIcon_my_profile => 'Profilim';
 
   @override
-  String get homeIcon_information => 'Önemli Bilgiler';
+  String get homeIcon_information => 'Bilgiler';
 
   @override
   String get homeIcon_rules => 'Etkinlik Kuralları';
@@ -119,6 +119,122 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get profile_postsEmpty => 'Henüz bir gönderi paylaşılmadı.';
+
+  @override
+  String get profile_myProfileTitle => 'Profilim';
+
+  @override
+  String get profile_photoUploading => 'Fotoğrafın yükleniyor…';
+
+  @override
+  String get profile_photoUpdated => 'Profil fotoğrafın güncellendi.';
+
+  @override
+  String get profile_photoError => 'Profil fotoğrafın güncellenemedi.';
+
+  @override
+  String get profile_descriptionEmpty =>
+      'Diğer katılımcıların seni tanıyabilmesi için buraya bir açıklama girebilir ve sosyal medya hesaplarını paylaşabilirsin.';
+
+  @override
+  String get profile_shareProfile => 'Profili Paylaş';
+
+  @override
+  String get profile_shareError => 'Profilin paylaşılamadı.';
+
+  @override
+  String get profile_edit => 'Düzenle';
+
+  @override
+  String get profile_editTitle => 'Profili Düzenle';
+
+  @override
+  String get profile_descriptionLabel => 'Açıklama';
+
+  @override
+  String get profile_descriptionHint => 'Diğer katılımcılara kendinden bahset';
+
+  @override
+  String get profile_socialMedia => 'Sosyal Medya';
+
+  @override
+  String get profile_linkedInHint => 'linkedin.com/in/profilin';
+
+  @override
+  String get profile_instagramHint => 'instagram.com/profilin';
+
+  @override
+  String get profile_websiteHint => 'websiten.com';
+
+  @override
+  String get profile_portfolioHint => 'portfolyon.com';
+
+  @override
+  String get profile_save => 'Kaydet';
+
+  @override
+  String get profile_cancel => 'İptal';
+
+  @override
+  String get profile_saved => 'Profilin güncellendi.';
+
+  @override
+  String get profile_saveError => 'Profilin kaydedilemedi.';
+
+  @override
+  String get profile_loadError => 'Profilin yüklenemedi.';
+
+  @override
+  String get profile_notFound => 'Profil bulunamadı.';
+
+  @override
+  String get profile_signOut => 'Çıkış Yap';
+
+  @override
+  String get profile_menuInformation => 'Kişisel Bilgilerim';
+
+  @override
+  String get profile_menuQrCode => 'QR Kodum';
+
+  @override
+  String get profile_menuAccommodation => 'Konaklama Bilgilerim';
+
+  @override
+  String get profile_menuTransportation => 'Ulaşım Bilgilerim';
+
+  @override
+  String get profile_menuFlights => 'Uçuş Bilgilerim';
+
+  @override
+  String get profile_qrHint =>
+      'Kimliğini doğrulamak için bu kodu etkinlik ekibine gösterebilirsin.';
+
+  @override
+  String get profile_comingSoon => 'Bu bölüm çok yakında burada olacak.';
+
+  @override
+  String get profile_personalInfo => 'Kişisel Bilgiler';
+
+  @override
+  String get profile_socialProfiles => 'Sosyal Hesaplar';
+
+  @override
+  String get profile_fullName => 'Ad Soyad';
+
+  @override
+  String get profile_jobTitle => 'Ünvan';
+
+  @override
+  String get profile_company => 'Şirket';
+
+  @override
+  String get profile_emailAddress => 'E-posta Adresi';
+
+  @override
+  String get profile_phone => 'İletişim Numarası';
+
+  @override
+  String get profile_infoEmpty => 'Profilinde henüz kişisel bilgi yok.';
 
   @override
   String get login_forgotPassword => 'Şifremi Unuttum?';
@@ -358,11 +474,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gallery_addCancel => 'Vazgeç';
 
   @override
-  String landing_greeting(String name) {
-    return 'Merhaba, $name';
-  }
-
-  @override
   String get landing_readNow => 'Şimdi Oku';
 
   @override
@@ -403,11 +514,6 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get community_mediaRequired =>
       'Paylaşmak için en az bir fotoğraf veya video ekleyin.';
-
-  @override
-  String community_mediaLimit(int count) {
-    return 'Bir gönderi en fazla $count fotoğraf ve video taşır.';
-  }
 
   @override
   String get community_mediaError => 'Eklenemedi. Lütfen tekrar deneyin.';
@@ -491,7 +597,299 @@ class AppLocalizationsTr extends AppLocalizations {
       'Bu gönderi bildirilemedi. Lütfen tekrar deneyin.';
 
   @override
+  String get transportation_title => 'Transferler';
+
+  @override
+  String get transportation_fromLabel => 'Kalkış';
+
+  @override
+  String get transportation_toLabel => 'Varış';
+
+  @override
+  String get transportation_dateLabel => 'Tarih';
+
+  @override
+  String get transportation_selectPlaceholder => 'Seçiniz';
+
+  @override
+  String get transportation_search => 'Transfer Ara';
+
+  @override
+  String get transportation_resultsTitle => 'Uygun Transferler';
+
+  @override
+  String get transportation_choose => 'Seç';
+
+  @override
+  String get transportation_full => 'Dolu';
+
+  @override
+  String get transportation_booked => 'Seçildi';
+
+  @override
+  String get transportation_noResults =>
+      'Seçtiğiniz gün bu iki nokta arasında transfer bulunmuyor.';
+
+  @override
+  String get transportation_noDestinations =>
+      'Bu etkinlik için henüz transfer tanımlanmamış.';
+
+  @override
+  String get transportation_loadError =>
+      'Transferler yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get transportation_bookSuccess => 'Yeriniz ayrıldı.';
+
+  @override
+  String get transportation_bookFull => 'Bu transferde yer kalmadı.';
+
+  @override
+  String get transportation_bookError =>
+      'Yeriniz ayrılamadı. Lütfen tekrar deneyin.';
+
+  @override
+  String get support_title => 'İletişim';
+
+  @override
+  String get support_emptyTitle => 'Henüz talebiniz yok';
+
+  @override
+  String get support_empty =>
+      'Etkinlik ekibine dilediğinizi sorun — yanıtı burada alırsınız.';
+
+  @override
+  String get support_loadError =>
+      'Talepleriniz yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get support_newRequest => 'Yeni talep';
+
+  @override
+  String get support_subjectLabel => 'Konu';
+
+  @override
+  String get support_subjectHint => 'Konu nedir?';
+
+  @override
+  String get support_messageLabel => 'Mesaj';
+
+  @override
+  String get support_messageHint => 'Neye ihtiyacınız olduğunu yazın…';
+
+  @override
+  String get support_sendRequest => 'Talebi gönder';
+
+  @override
+  String get support_subjectRequired =>
+      'Konuyu anlayabilmemiz için bir başlık ekleyin.';
+
+  @override
+  String get support_messageRequired => 'Göndermeden önce bir mesaj yazın.';
+
+  @override
+  String get support_createError =>
+      'Talebiniz gönderilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get support_sendError =>
+      'Mesajınız gönderilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get support_chatHint => 'Bir mesaj yazın…';
+
+  @override
+  String get support_chatSend => 'Mesaj gönder';
+
+  @override
+  String get support_chatEmpty => 'Bu talepte henüz mesaj yok.';
+
+  @override
+  String get support_requestMissing => 'Bu talep artık mevcut değil.';
+
+  @override
+  String get support_statusAwaiting => 'Yanıt bekleniyor';
+
+  @override
+  String get support_statusAnswered => 'Yanıtlandı';
+
+  @override
+  String get support_statusResolved => 'Çözüldü';
+
+  @override
+  String get support_resolvedNotice =>
+      'Bu talep çözüldü olarak işaretlendi. Yeniden açmak için mesaj gönderin.';
+
+  @override
+  String get support_teamName => 'Destek Ekibi';
+
+  @override
+  String get support_you => 'Siz';
+
+  @override
+  String landing_greeting(String name) {
+    return 'Merhaba, $name';
+  }
+
+  @override
+  String community_mediaLimit(int count) {
+    return 'Bir gönderi en fazla $count fotoğraf ve video taşır.';
+  }
+
+  @override
   String landing_enjoyDay(String day, String eventName) {
     return '$eventName - $day. günün tadını çıkar!';
+  }
+
+  @override
+  String get flights_title => 'Uçak Rezervasyon';
+
+  @override
+  String get flights_preferenceTitle => 'Ulaşım Tercihiniz';
+
+  @override
+  String get flights_preferenceSelf => 'Kendi Aracımla';
+
+  @override
+  String get flights_preferenceFlight => 'Uçakla';
+
+  @override
+  String get flights_arrivalSection => 'Gidiş';
+
+  @override
+  String get flights_departureSection => 'Dönüş';
+
+  @override
+  String get flights_arrivalCityLabel => 'Uçağınızın Kalkacağı Şehir';
+
+  @override
+  String get flights_departureCityLabel => 'Uçağınızın İneceği Şehir';
+
+  @override
+  String get flights_flightLabel => 'Uçuş';
+
+  @override
+  String get flights_selectPlaceholder => '-Seçiniz-';
+
+  @override
+  String get flights_continue => 'Devam Et';
+
+  @override
+  String get flights_reviewIntro =>
+      'Devam etmeden önce bilgilerinin doğruluğunu kontrol et.';
+
+  @override
+  String get flights_personalTitle => 'Kişisel Bilgiler';
+
+  @override
+  String get flights_fullName => 'İsim Soyisim';
+
+  @override
+  String get flights_birthDate => 'Doğum Tarihi';
+
+  @override
+  String get flights_gender => 'Cinsiyet';
+
+  @override
+  String get flights_genderMale => 'Erkek';
+
+  @override
+  String get flights_genderFemale => 'Kadın';
+
+  @override
+  String get flights_identityNumber => 'TC Kimlik Numarası';
+
+  @override
+  String get flights_identitySerial => 'Kimlik Seri Numarası';
+
+  @override
+  String get flights_arrivalDetailsTitle => 'Gidiş Uçuşu Detayları';
+
+  @override
+  String get flights_departureDetailsTitle => 'Dönüş Uçuşu Detayları';
+
+  @override
+  String get flights_routeLabel => 'Şehir-Havalimanı';
+
+  @override
+  String get flights_flightRowLabel => 'Uçuş';
+
+  @override
+  String get flights_dateTimeLabel => 'Tarih-Saat';
+
+  @override
+  String get flights_pnrLabel => 'Rezervasyon Kodu (PNR)';
+
+  @override
+  String get flights_confirm => 'Uçuşu Onayla';
+
+  @override
+  String get flights_notProvided => '-';
+
+  @override
+  String get flights_successTitle => 'Uçuşun Rezerve Edildi!';
+
+  @override
+  String get flights_successBody =>
+      'Uçuş detayların eposta adresine gönderilecek. Biniş öncesinde check-in yapmayı unutma.';
+
+  @override
+  String get flights_successHint =>
+      'Uçuş detaylarına ayrıca profilinden ulaşabilirsin.';
+
+  @override
+  String get flights_successAction => 'Uygulamaya Devam Et';
+
+  @override
+  String get flights_pendingBanner =>
+      'Tercihlerin kaydedildi. Uçuş detayların uygulamaya yüklendiğinde buradan görebileceksin.';
+
+  @override
+  String get flights_savedSelfTitle => 'Kendi Aracınla Geliyorsun';
+
+  @override
+  String get flights_savedSelfBody =>
+      'Senin için bir bilet almayacağız. Talebin açık olduğu sürece bu tercihini değiştirebilirsin.';
+
+  @override
+  String get flights_edit => 'Talebimi Düzenle';
+
+  @override
+  String get flights_full => 'Dolu';
+
+  @override
+  String get flights_chosen => 'Seçildi';
+
+  @override
+  String get flights_noFlights => 'Bu etkinlik için henüz uçuş tanımlanmamış.';
+
+  @override
+  String get flights_noFlightsForCity => 'Buradan kalkan bir uçuş bulunmuyor.';
+
+  @override
+  String get flights_loadError => 'Uçuşlar yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get flights_incompleteLeg =>
+      'Seçtiğin her şehir için bir uçuş seç ya da şehir seçimini kaldır.';
+
+  @override
+  String get flights_noLegChosen => 'Lütfen en az bir uçuş seç.';
+
+  @override
+  String get flights_submitError =>
+      'Talebin kaydedilemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get flights_submitFull =>
+      'Bu uçuşta yer kalmadı. Lütfen başka bir uçuş seç.';
+
+  @override
+  String get flights_lockedError =>
+      'Talebin işleme alındı, artık değiştirilemez.';
+
+  @override
+  String flights_seatsLeft(int count) {
+    return '$count koltuk kaldı';
   }
 }

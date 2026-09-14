@@ -37,7 +37,7 @@
     "menu_modules": "Modules",
     "menu_user": "Profile",
     "homeIcon_my_profile": "My Profile",
-    "homeIcon_information": "Important Information",
+    "homeIcon_information": "Information",
     "homeIcon_rules": "Event Rules",
     "homeIcon_hotel": "Accommodation",
     "homeIcon_flights": "Flights",
@@ -69,6 +69,158 @@
     "profile_postsEmpty": "Nothing has been posted yet.",
     "@profile_postsEmpty": {
         "description": "Shown on the profile screen's Posts tab while the user has no posts"
+    },
+    "profile_myProfileTitle": "Your Profile",
+    "profile_photoUploading": "Uploading your photo…",
+    "@profile_photoUploading": {
+        "description": "Shown while a newly picked profile photo is being uploaded"
+    },
+    "profile_photoUpdated": "Your profile photo has been updated.",
+    "@profile_photoUpdated": {
+        "description": "Confirmation shown once the new profile photo is stored"
+    },
+    "profile_photoError": "Your profile photo could not be updated.",
+    "@profile_photoError": {
+        "description": "Shown when picking or uploading a profile photo failed"
+    },
+    "@profile_myProfileTitle": {
+        "description": "The title of the profile screen when the user is looking at their own profile"
+    },
+    "profile_descriptionEmpty": "Add a description here and share your social media accounts so the other attendees can get to know you.",
+    "@profile_descriptionEmpty": {
+        "description": "Shown in place of the bio on your own profile while you have not written one"
+    },
+    "profile_shareProfile": "Share Profile",
+    "@profile_shareProfile": {
+        "description": "The button that hands your profile to the platform's share sheet"
+    },
+    "profile_shareError": "Your profile could not be shared.",
+    "@profile_shareError": {
+        "description": "Shown when the share sheet could not be opened"
+    },
+    "profile_edit": "Edit",
+    "@profile_edit": {
+        "description": "The button that opens the bio for editing, on your own profile"
+    },
+    "profile_editTitle": "Edit Profile",
+    "@profile_editTitle": {
+        "description": "The title of the screen where you edit your bio and your links"
+    },
+    "profile_descriptionLabel": "Description",
+    "@profile_descriptionLabel": {
+        "description": "The label of the bio field on the edit profile screen"
+    },
+    "profile_descriptionHint": "Tell the other attendees about yourself",
+    "@profile_descriptionHint": {
+        "description": "The placeholder of the bio field on the edit profile screen"
+    },
+    "profile_socialMedia": "Social Media",
+    "@profile_socialMedia": {
+        "description": "The heading of the social links section on the edit profile screen"
+    },
+    "profile_linkedInHint": "linkedin.com/in/your-profile",
+    "@profile_linkedInHint": {
+        "description": "The placeholder of the LinkedIn field"
+    },
+    "profile_instagramHint": "instagram.com/your-profile",
+    "@profile_instagramHint": {
+        "description": "The placeholder of the Instagram field"
+    },
+    "profile_websiteHint": "yourwebsite.com",
+    "@profile_websiteHint": {
+        "description": "The placeholder of the website field"
+    },
+    "profile_portfolioHint": "yourportfolio.com",
+    "@profile_portfolioHint": {
+        "description": "The placeholder of the portfolio field"
+    },
+    "profile_save": "Save",
+    "@profile_save": {
+        "description": "The button that writes profile changes"
+    },
+    "profile_cancel": "Cancel",
+    "@profile_cancel": {
+        "description": "The button that abandons profile changes"
+    },
+    "profile_saved": "Your profile has been updated.",
+    "@profile_saved": {
+        "description": "Confirmation shown after profile changes are written"
+    },
+    "profile_saveError": "Your profile could not be saved.",
+    "@profile_saveError": {
+        "description": "Shown when writing profile changes failed"
+    },
+    "profile_loadError": "Your profile could not be loaded.",
+    "@profile_loadError": {
+        "description": "Shown when the profile document could not be read"
+    },
+    "profile_notFound": "Profile not found.",
+    "@profile_notFound": {
+        "description": "Shown when there is no profile document for the requested user"
+    },
+    "profile_signOut": "Sign Out",
+    "@profile_signOut": {
+        "description": "The button at the foot of your own profile that signs you out"
+    },
+    "profile_menuInformation": "My Personal Information",
+    "@profile_menuInformation": {
+        "description": "The profile menu row that opens the details the organisers hold about you"
+    },
+    "profile_menuQrCode": "My QR Code",
+    "@profile_menuQrCode": {
+        "description": "The profile menu row that opens the code identifying you at the event"
+    },
+    "profile_menuAccommodation": "My Accommodation Details",
+    "@profile_menuAccommodation": {
+        "description": "The profile menu row for where the user is staying"
+    },
+    "profile_menuTransportation": "My Transportation Details",
+    "@profile_menuTransportation": {
+        "description": "The profile menu row for the user's transfers"
+    },
+    "profile_menuFlights": "My Flight Details",
+    "@profile_menuFlights": {
+        "description": "The profile menu row for the user's flights"
+    },
+    "profile_qrHint": "Show this code to the event team to identify yourself.",
+    "@profile_qrHint": {
+        "description": "The line under the QR code explaining what it is for"
+    },
+    "profile_comingSoon": "This section will be here soon.",
+    "@profile_comingSoon": {
+        "description": "Placeholder for the profile sections that are not built yet"
+    },
+    "profile_personalInfo": "Personal Info",
+    "@profile_personalInfo": {
+        "description": "The heading above the user's name, title and contact details"
+    },
+    "profile_socialProfiles": "Social Profiles",
+    "@profile_socialProfiles": {
+        "description": "The heading above the user's links"
+    },
+    "profile_fullName": "Full Name",
+    "@profile_fullName": {
+        "description": "The label of the name row"
+    },
+    "profile_jobTitle": "Title",
+    "@profile_jobTitle": {
+        "description": "The label of the job title row"
+    },
+    "profile_company": "Company",
+    "@profile_company": {
+        "description": "The label of the company row"
+    },
+    "profile_emailAddress": "Email Address",
+    "@profile_emailAddress": {
+        "description": "The label of the email row"
+    },
+    "profile_phone": "Contact Number",
+    "@profile_phone": {
+        "description": "The label of the phone number row"
+    },
+    "profile_infoEmpty": "There is no personal information on your profile yet.",
+    "@profile_infoEmpty": {
+        "description": "Shown on the personal information screen when every field is unset"
     },
     "login_forgotPassword": "Forgot Password?",
     "@login_forgotPassword": {
@@ -358,15 +510,6 @@
     "@gallery_addCancel": {
         "description": "The button that closes the add sheet without adding anything"
     },
-    "landing_greeting": "Hi, {name}",
-    "@landing_greeting": {
-        "description": "The greeting at the top of the landing (home) screen, with the user's first name",
-        "placeholders": {
-            "name": {
-                "type": "String"
-            }
-        }
-    },
     "landing_readNow": "Read Now",
     "@landing_readNow": {
         "description": "The call to action under the latest announcement on the landing screen"
@@ -418,15 +561,6 @@
     "community_mediaRequired": "Add at least one photo or video to post.",
     "@community_mediaRequired": {
         "description": "Shown when the post button is used before any media has been chosen"
-    },
-    "community_mediaLimit": "A post holds up to {count} photos and videos.",
-    "@community_mediaLimit": {
-        "description": "Shown when the user picks more media than one post can hold",
-        "placeholders": {
-            "count": {
-                "type": "int"
-            }
-        }
     },
     "community_mediaError": "That couldn't be added. Please try again.",
     "@community_mediaError": {
@@ -524,6 +658,184 @@
     "@community_reportError": {
         "description": "Shown when reporting a post fails"
     },
+    "transportation_title": "Transfers",
+    "@transportation_title": {
+        "description": "Title of the internal transfers screen"
+    },
+    "transportation_fromLabel": "Departure",
+    "@transportation_fromLabel": {
+        "description": "Picker label for where a transfer leaves from"
+    },
+    "transportation_toLabel": "Arrival",
+    "@transportation_toLabel": {
+        "description": "Picker label for where a transfer arrives"
+    },
+    "transportation_dateLabel": "Date",
+    "@transportation_dateLabel": {
+        "description": "Picker label for the transfer day"
+    },
+    "transportation_selectPlaceholder": "Select",
+    "@transportation_selectPlaceholder": {
+        "description": "Placeholder shown in an empty picker"
+    },
+    "transportation_search": "Search Transfers",
+    "@transportation_search": {
+        "description": "Button that runs the transfer search"
+    },
+    "transportation_resultsTitle": "Available Transfers",
+    "@transportation_resultsTitle": {
+        "description": "Heading above the matching transfers"
+    },
+    "transportation_choose": "Choose",
+    "@transportation_choose": {
+        "description": "Button that takes a seat on a transfer"
+    },
+    "transportation_full": "Full",
+    "@transportation_full": {
+        "description": "Shown on a transfer whose seats have run out"
+    },
+    "transportation_booked": "Booked",
+    "@transportation_booked": {
+        "description": "Shown on a transfer the viewer already has a seat on"
+    },
+    "transportation_noResults": "No transfers run between these places on the day you picked.",
+    "@transportation_noResults": {
+        "description": "Empty state when no transfer matches the search"
+    },
+    "transportation_noDestinations": "No transfers have been set up for this event yet.",
+    "@transportation_noDestinations": {
+        "description": "Empty state when the event has no transfer destinations"
+    },
+    "transportation_loadError": "Transfers couldn't be loaded. Please try again.",
+    "@transportation_loadError": {
+        "description": "Error shown when the transfers fail to load"
+    },
+    "transportation_bookSuccess": "Your seat is booked.",
+    "@transportation_bookSuccess": {
+        "description": "Confirmation shown after a seat is taken"
+    },
+    "transportation_bookFull": "This transfer just filled up.",
+    "@transportation_bookFull": {
+        "description": "Error shown when a transfer filled up before the tap"
+    },
+    "transportation_bookError": "Your seat couldn't be booked. Please try again.",
+    "@transportation_bookError": {
+        "description": "Error shown when taking a seat fails"
+    },
+    "support_title": "Contact",
+    "@support_title": {
+        "description": "Title of the support requests screen"
+    },
+    "support_emptyTitle": "No requests yet",
+    "@support_emptyTitle": {
+        "description": "Heading of the support empty state"
+    },
+    "support_empty": "Ask the event team anything — they'll answer right here.",
+    "@support_empty": {
+        "description": "Body of the support empty state"
+    },
+    "support_loadError": "Your requests couldn't be loaded. Please try again.",
+    "@support_loadError": {
+        "description": "Error shown when the support requests fail to load"
+    },
+    "support_newRequest": "New request",
+    "@support_newRequest": {
+        "description": "Button that opens the new support request form"
+    },
+    "support_subjectLabel": "Subject",
+    "@support_subjectLabel": {
+        "description": "Field label for a support request's subject"
+    },
+    "support_subjectHint": "What is it about?",
+    "@support_subjectHint": {
+        "description": "Placeholder for the subject field"
+    },
+    "support_messageLabel": "Message",
+    "@support_messageLabel": {
+        "description": "Field label for a support request's message"
+    },
+    "support_messageHint": "Tell us what you need…",
+    "@support_messageHint": {
+        "description": "Placeholder for the message field"
+    },
+    "support_sendRequest": "Send request",
+    "@support_sendRequest": {
+        "description": "Button that submits a new support request"
+    },
+    "support_subjectRequired": "Add a subject so we know what it's about.",
+    "@support_subjectRequired": {
+        "description": "Validation message for an empty subject"
+    },
+    "support_messageRequired": "Write a message before sending.",
+    "@support_messageRequired": {
+        "description": "Validation message for an empty message"
+    },
+    "support_createError": "Your request couldn't be sent. Please try again.",
+    "@support_createError": {
+        "description": "Error shown when creating a support request fails"
+    },
+    "support_sendError": "Your message couldn't be sent. Please try again.",
+    "@support_sendError": {
+        "description": "Error shown when sending a support message fails"
+    },
+    "support_chatHint": "Write a message…",
+    "@support_chatHint": {
+        "description": "Placeholder for the message box in a support thread"
+    },
+    "support_chatSend": "Send message",
+    "@support_chatSend": {
+        "description": "Accessibility label for the send button in a support thread"
+    },
+    "support_chatEmpty": "No messages in this request yet.",
+    "@support_chatEmpty": {
+        "description": "Empty state inside a support thread with no messages"
+    },
+    "support_requestMissing": "This request is no longer available.",
+    "@support_requestMissing": {
+        "description": "Shown when a support request can no longer be opened"
+    },
+    "support_statusAwaiting": "Waiting for a reply",
+    "@support_statusAwaiting": {
+        "description": "Support request status: no reply yet"
+    },
+    "support_statusAnswered": "Answered",
+    "@support_statusAnswered": {
+        "description": "Support request status: the team has replied"
+    },
+    "support_statusResolved": "Resolved",
+    "@support_statusResolved": {
+        "description": "Support request status: closed"
+    },
+    "support_resolvedNotice": "This request was marked resolved. Send a message to reopen it.",
+    "@support_resolvedNotice": {
+        "description": "Notice shown at the top of a resolved support thread"
+    },
+    "support_teamName": "Support Team",
+    "@support_teamName": {
+        "description": "Sender name shown on messages from the event team"
+    },
+    "support_you": "You",
+    "@support_you": {
+        "description": "Sender name shown on the viewer's own messages"
+    },
+    "landing_greeting": "Hi, {name}",
+    "@landing_greeting": {
+        "description": "The greeting at the top of the landing (home) screen, with the user's first name",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "community_mediaLimit": "A post holds up to {count} photos and videos.",
+    "@community_mediaLimit": {
+        "description": "Shown when the user picks more media than one post can hold",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
     "landing_enjoyDay": "Enjoy the {day} day of {eventName}",
     "@landing_enjoyDay": {
         "description": "Fallback banner text over the event's featured image when the event has no slogan. {day} is a locale-formatted day-of-event token (an English ordinal like \"2nd\"; a plain number in Turkish).",
@@ -533,6 +845,199 @@
             },
             "eventName": {
                 "type": "String"
+            }
+        }
+    },
+    "flights_title": "Flight Reservation",
+    "@flights_title": {
+        "description": "Title of the external travel (flight reservation) screen"
+    },
+    "flights_preferenceTitle": "Your Travel Preference",
+    "@flights_preferenceTitle": {
+        "description": "Heading of the how-will-you-travel choice"
+    },
+    "flights_preferenceSelf": "By My Own Means",
+    "@flights_preferenceSelf": {
+        "description": "Choice: the participant arranges their own travel"
+    },
+    "flights_preferenceFlight": "By Plane",
+    "@flights_preferenceFlight": {
+        "description": "Choice: the participant wants a flight booked for them"
+    },
+    "flights_arrivalSection": "Arrival",
+    "@flights_arrivalSection": {
+        "description": "Heading of the leg that brings a participant to the event"
+    },
+    "flights_departureSection": "Return",
+    "@flights_departureSection": {
+        "description": "Heading of the leg that takes a participant home"
+    },
+    "flights_arrivalCityLabel": "City You'll Depart From",
+    "@flights_arrivalCityLabel": {
+        "description": "Picker label for the participant's home city on the way in"
+    },
+    "flights_departureCityLabel": "City You'll Return To",
+    "@flights_departureCityLabel": {
+        "description": "Picker label for the participant's home city on the way back"
+    },
+    "flights_flightLabel": "Flight",
+    "@flights_flightLabel": {
+        "description": "Picker label for choosing a published flight"
+    },
+    "flights_selectPlaceholder": "-Select-",
+    "@flights_selectPlaceholder": {
+        "description": "Placeholder shown in an empty picker"
+    },
+    "flights_continue": "Continue",
+    "@flights_continue": {
+        "description": "Button that moves from the form to the review step"
+    },
+    "flights_reviewIntro": "Check that your details are correct before continuing.",
+    "@flights_reviewIntro": {
+        "description": "Instruction above the review summary"
+    },
+    "flights_personalTitle": "Personal Information",
+    "@flights_personalTitle": {
+        "description": "Heading of the passenger details block"
+    },
+    "flights_fullName": "Full Name",
+    "@flights_fullName": {
+        "description": "Passenger field label"
+    },
+    "flights_birthDate": "Date of Birth",
+    "@flights_birthDate": {
+        "description": "Passenger field label"
+    },
+    "flights_gender": "Gender",
+    "@flights_gender": {
+        "description": "Passenger field label"
+    },
+    "flights_genderMale": "Male",
+    "@flights_genderMale": {
+        "description": "Passenger gender as printed on a ticket"
+    },
+    "flights_genderFemale": "Female",
+    "@flights_genderFemale": {
+        "description": "Passenger gender as printed on a ticket"
+    },
+    "flights_identityNumber": "ID Number",
+    "@flights_identityNumber": {
+        "description": "Passenger field label for the number on their travel document"
+    },
+    "flights_identitySerial": "ID Serial Number",
+    "@flights_identitySerial": {
+        "description": "Passenger field label for a TR ID card's serial number"
+    },
+    "flights_arrivalDetailsTitle": "Arrival Flight Details",
+    "@flights_arrivalDetailsTitle": {
+        "description": "Heading of the arrival leg summary"
+    },
+    "flights_departureDetailsTitle": "Return Flight Details",
+    "@flights_departureDetailsTitle": {
+        "description": "Heading of the return leg summary"
+    },
+    "flights_routeLabel": "City-Airport",
+    "@flights_routeLabel": {
+        "description": "Summary row label for a leg's route"
+    },
+    "flights_flightRowLabel": "Flight",
+    "@flights_flightRowLabel": {
+        "description": "Summary row label for the airline and flight number"
+    },
+    "flights_dateTimeLabel": "Date-Time",
+    "@flights_dateTimeLabel": {
+        "description": "Summary row label for when a flight leaves"
+    },
+    "flights_pnrLabel": "Reservation Code (PNR)",
+    "@flights_pnrLabel": {
+        "description": "Summary row label for the booking reference"
+    },
+    "flights_confirm": "Confirm Flight",
+    "@flights_confirm": {
+        "description": "Button that submits the travel request"
+    },
+    "flights_notProvided": "-",
+    "@flights_notProvided": {
+        "description": "Placeholder shown in place of a detail the participant hasn't given yet"
+    },
+    "flights_successTitle": "Your Flight Is Reserved!",
+    "@flights_successTitle": {
+        "description": "Heading of the confirmation screen"
+    },
+    "flights_successBody": "Your flight details will be sent to your email address. Don't forget to check in before boarding.",
+    "@flights_successBody": {
+        "description": "First paragraph of the confirmation screen"
+    },
+    "flights_successHint": "You can also find your flight details in your profile.",
+    "@flights_successHint": {
+        "description": "Second paragraph of the confirmation screen"
+    },
+    "flights_successAction": "Continue to the App",
+    "@flights_successAction": {
+        "description": "Button that leaves the confirmation screen"
+    },
+    "flights_pendingBanner": "Your preferences are saved. You will be able to see your flight details once they are uploaded to the application.",
+    "@flights_pendingBanner": {
+        "description": "Notice shown while a request is submitted but not yet ticketed"
+    },
+    "flights_savedSelfTitle": "You're Travelling by Your Own Means",
+    "@flights_savedSelfTitle": {
+        "description": "Heading shown to someone who opted out of a booked flight"
+    },
+    "flights_savedSelfBody": "We won't book anything for you. You can change this while your request is still open.",
+    "@flights_savedSelfBody": {
+        "description": "Body shown to someone who opted out of a booked flight"
+    },
+    "flights_edit": "Edit My Request",
+    "@flights_edit": {
+        "description": "Button that reopens a submitted request for editing"
+    },
+    "flights_full": "Full",
+    "@flights_full": {
+        "description": "Shown on a flight whose seats have run out"
+    },
+    "flights_chosen": "Chosen",
+    "@flights_chosen": {
+        "description": "Shown on the flight the participant already picked"
+    },
+    "flights_noFlights": "No flights have been published for this event yet.",
+    "@flights_noFlights": {
+        "description": "Empty state when the event has no published flights"
+    },
+    "flights_noFlightsForCity": "No flights from here yet.",
+    "@flights_noFlightsForCity": {
+        "description": "Empty state in the flight picker for a city with no flights"
+    },
+    "flights_loadError": "Flights couldn't be loaded. Please try again.",
+    "@flights_loadError": {
+        "description": "Error shown when the flights or the request fail to load"
+    },
+    "flights_incompleteLeg": "Please choose a flight for each city you picked, or clear the city.",
+    "@flights_incompleteLeg": {
+        "description": "Validation message when a leg has a city but no flight"
+    },
+    "flights_noLegChosen": "Please choose at least one flight.",
+    "@flights_noLegChosen": {
+        "description": "Validation message when flying but no leg is complete"
+    },
+    "flights_submitError": "Your request couldn't be saved. Please try again.",
+    "@flights_submitError": {
+        "description": "Error shown when submitting the request fails"
+    },
+    "flights_submitFull": "That flight just filled up. Please choose another.",
+    "@flights_submitFull": {
+        "description": "Error shown when a chosen flight ran out of seats"
+    },
+    "flights_lockedError": "Your request is already being processed and can no longer be changed.",
+    "@flights_lockedError": {
+        "description": "Error shown when editing a request the panel has taken over"
+    },
+    "flights_seatsLeft": "{count} seats left",
+    "@flights_seatsLeft": {
+        "description": "How many seats remain on a capacity-limited flight",
+        "placeholders": {
+            "count": {
+                "type": "int"
             }
         }
     }

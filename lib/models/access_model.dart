@@ -54,6 +54,54 @@ class Collections {
 
   /// Subcollection of a post: `.../community/{postId}/comments/{commentId}`.
   static const String comments = 'comments';
+
+  /// Subcollection of an event: `events/{eventId}/destinations/{id}` — the
+  /// places transfers run between (hotels, venues, airports).
+  static const String destinations = 'destinations';
+
+  /// Subcollection of an event:
+  /// `events/{eventId}/internalTransportations/{id}` — a scheduled transfer
+  /// between two destinations, with a seat capacity.
+  static const String internalTransportations = 'internalTransportations';
+
+  /// Subcollection of a transfer: `.../internalTransportations/{id}/bookings/{uid}`.
+  /// Keyed by the booking user's uid so a seat is idempotent — the same
+  /// convention [likes] uses. One of the collections the app itself writes to.
+  static const String bookings = 'bookings';
+
+  /// Subcollection of an event: `events/{eventId}/travelDestinations/{id}` —
+  /// the origin cities and airports EXTERNAL flights run between. Separate from
+  /// [destinations] (hotels and venues in the event city) so neither list
+  /// pollutes the other's picker.
+  static const String travelDestinations = 'travelDestinations';
+
+  /// Subcollection of an event:
+  /// `events/{eventId}/externalTransportations/{id}` — a flight admins publish
+  /// for participants to request.
+  static const String externalTransportations = 'externalTransportations';
+
+  /// Subcollection of a flight: `.../externalTransportations/{id}/seats/{uid}`.
+  /// The countable mirror of who is on a capacity-limited flight — it exists
+  /// because the request document itself is not broadly readable. One of the
+  /// collections the app itself writes to.
+  static const String seats = 'seats';
+
+  /// Subcollection of an event:
+  /// `events/{eventId}/externalTransportationBookings/{uid}` — one travel
+  /// request per participant, keyed by their uid. The app writes the request;
+  /// the panel writes its status and each leg's ticket.
+  static const String externalTransportationBookings =
+      'externalTransportationBookings';
+
+  /// Subcollection of an event: `events/{eventId}/supportRequests/{id}` — a
+  /// participant's conversation with the event's managers. Unlike the feed and
+  /// the gallery, a request is readable only by its author and the managers,
+  /// so every query the app makes here filters on `requesterId`.
+  static const String supportRequests = 'supportRequests';
+
+  /// Subcollection of a request: `.../supportRequests/{id}/messages/{msgId}` —
+  /// the conversation itself. One of the collections the app writes to.
+  static const String supportMessages = 'messages';
 }
 
 /// A user's platform tier, stored on `users/{uid}.role`.

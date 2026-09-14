@@ -8,6 +8,7 @@ import '../legal/kvkk_screen.dart';
 import '../legal/terms_and_conditions_screen.dart';
 import '../layouts/main_scaffold.dart';
 import '../models/community_model.dart';
+import '../models/support_model.dart';
 import '../screens/activity_detail_screen.dart';
 import '../screens/announcements_screen.dart';
 import '../screens/calendar_screen.dart';
@@ -19,9 +20,17 @@ import '../screens/gallery_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/participant_detail_screen.dart';
 import '../screens/post_detail_screen.dart';
+import '../screens/my_profile_screen.dart';
+import '../screens/profile_edit_screen.dart';
+import '../screens/profile_information_screen.dart';
+import '../screens/profile_qr_screen.dart';
 import '../screens/profile_screen.dart';
-import '../screens/profile_tab_screen.dart';
+import '../screens/profile_section_placeholders.dart';
+import '../screens/support_chat_screen.dart';
+import '../screens/support_requests_screen.dart';
 import '../screens/tips_screen.dart';
+import '../screens/flight_reservation_screen.dart';
+import '../screens/transportation_screen.dart';
 import '../providers/access_providers.dart';
 import '../providers/auth_providers.dart';
 
@@ -172,7 +181,55 @@ class AppRouter {
                 GoRoute(
                   path: '/profile',
                   name: 'profileTab',
-                  builder: (context, state) => const ProfileTabScreen(),
+                  builder: (context, state) => const MyProfileScreen(),
+                  // Each section of your own profile is nested under it, so
+                  // its path says where it belongs and back returns to the
+                  // profile. They open on the root navigator, though — a
+                  // section is a page you went into, so it covers the bottom
+                  // bar the way the documents and tips screens do.
+                  routes: [
+                    GoRoute(
+                      path: 'edit',
+                      name: 'profileEdit',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) => const ProfileEditScreen(),
+                    ),
+                    GoRoute(
+                      path: 'information',
+                      name: 'profileInformation',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) =>
+                          const ProfileInformationScreen(),
+                    ),
+                    GoRoute(
+                      path: 'qr',
+                      name: 'profileQr',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) => const ProfileQrScreen(),
+                    ),
+                    // The three sections that are named but not built yet.
+                    GoRoute(
+                      path: 'accommodation',
+                      name: 'profileAccommodation',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) =>
+                          const ProfileAccommodationScreen(),
+                    ),
+                    GoRoute(
+                      path: 'transportation',
+                      name: 'profileTransportation',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) =>
+                          const ProfileTransportationInfoScreen(),
+                    ),
+                    GoRoute(
+                      path: 'flights',
+                      name: 'profileFlights',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      builder: (context, state) =>
+                          const ProfileFlightsInfoScreen(),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -220,6 +277,21 @@ class AppRouter {
           ),
         ),
         GoRoute(
+          path: '/transportation',
+          name: 'transportation',
+          parentNavigatorKey: _rootNavigatorKey,
+          builder: (context, state) => const TransportationScreen(),
+        ),
+        // External travel — reaching the event city and going home again. A
+        // separate screen from /transportation because it is a request the
+        // organisers fulfil, not a seat the participant takes.
+        GoRoute(
+          path: '/flights',
+          name: 'flights',
+          parentNavigatorKey: _rootNavigatorKey,
+          builder: (context, state) => const FlightReservationScreen(),
+        ),
+        GoRoute(
           path: '/gallery',
           name: 'gallery',
           parentNavigatorKey: _rootNavigatorKey,
@@ -231,12 +303,45 @@ class AppRouter {
           parentNavigatorKey: _rootNavigatorKey,
           builder: (context, state) => const DocumentsScreen(),
         ),
+        // Support: the participant's own requests, and one conversation. The
+        // chat is nested so back from a thread returns to the list it was
+        // opened from.
         GoRoute(
-          path: '/profile/:profileId',
+          path: '/support',
+          name: 'support',
+          parentNavigatorKey: _rootNavigatorKey,
+          builder: (context, state) => const SupportRequestsScreen(),
+          routes: [
+            GoRoute(
+              path: 'request/:requestId',
+              name: 'supportRequest',
+              parentNavigatorKey: _rootNavigatorKey,
+              // The list passes the request it already has as `extra`, so the
+              // thread paints its header immediately and its own stream only
+              // refreshes it. Opened without one — straight after creating a
+              // request — it loads by id instead.
+              builder: (context, state) => SupportChatScreen(
+                requestId: state.pathParameters['requestId']!,
+                initialRequest: state.extra is SupportRequest
+                    ? state.extra as SupportRequest
+                    : null,
+              ),
+            ),
+          ],
+        ),
+        // Somebody else's profile, reached by tapping whoever wrote a post.
+        // Its own path rather than a child of /profile, which is the tab that
+        // is always yours — and the two views are different screens, so the
+        // builder sends you to your own when the id turns out to be yours
+        // (tapping your own avatar in the feed, say).
+        GoRoute(
+          path: '/user/:profileId',
           name: 'profile',
           parentNavigatorKey: _rootNavigatorKey,
           builder: (context, state) {
             final profileId = state.pathParameters['profileId']!;
+            final uid = ref.read(currentUserProvider)?.uid;
+            if (profileId == uid) return const MyProfileScreen();
             return ProfileScreen(profileId: profileId);
           },
         ),

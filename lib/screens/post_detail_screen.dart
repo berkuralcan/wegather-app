@@ -7,6 +7,7 @@ import '../community_widgets/community_author_row.dart';
 import '../community_widgets/community_card.dart';
 import '../community_widgets/community_media_carousel.dart';
 import '../community_widgets/mention_text.dart';
+import '../community_widgets/post_more_button.dart';
 import '../config/app_config.dart';
 import '../config/text_styles.dart';
 import '../l10n/app_localizations.dart';
@@ -41,7 +42,14 @@ class PostDetailScreen extends ConsumerStatefulWidget {
 }
 
 class _PostDetailScreenState extends ConsumerState<PostDetailScreen> {
-  static const double _inset = 12;
+  /// The gutter the whole screen keeps from the edge — the post block, the
+  /// comments and the composer — matching the inset the feed's list gives its
+  /// cards, so a post looks the same opened as it did in the feed.
+  static const double _inset = 16;
+
+  /// The rhythm above and below the post's header and its tallies, as on the
+  /// card.
+  static const double _postGap = 12;
 
   /// Indent of a comment's text, so it lines up under the author's name rather
   /// than under their photo.
@@ -189,7 +197,20 @@ class _PostDetailScreenState extends ConsumerState<PostDetailScreen> {
     final post = postState.hasValue ? postState.value : widget.initialPost;
 
     return Scaffold(
-      appBar: CustomAppBar(title: l10n.community_postTitle),
+      appBar: CustomAppBar(
+        title: l10n.community_postTitle,
+        // The feed hangs the post's options off the card itself; here there is
+        // no card, so they hang off the bar — reachable without scrolling back
+        // up past a long thread. Nothing to report until the post is there.
+        trailing: post == null
+            ? null
+            : PostMoreButton(
+                post: post,
+                // Free-standing rather than tucked against media, so the tap
+                // target grows on both sides of the glyph.
+                padding: const EdgeInsets.all(8),
+              ),
+      ),
       body: SafeArea(
         top: false,
         child: post == null
@@ -231,29 +252,48 @@ class _PostDetailScreenState extends ConsumerState<PostDetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // The post is laid out as the feed's card lays it out — same
+              // gutter, same spacing around the header and tallies, same
+              // rounded media — so opening a post doesn't reshape it.
               Padding(
-                padding: const EdgeInsets.all(_inset),
-                child: CommunityAuthorRow(
-                  name: post.authorName,
-                  imageUrl: post.authorImage,
-                  createdAt: post.createdAt,
-                  onTap: () => _openProfile(post.authorId),
-                ),
-              ),
-              if (post.media.isNotEmpty)
-                CommunityMediaCarousel(media: post.media, playVideos: true),
-              if (post.caption.trim().isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(_inset, _inset, _inset, 0),
-                  child: MentionText(text: post.caption),
-                ),
-              Padding(
-                padding: const EdgeInsets.all(_inset),
-                child: CommunityCounts(
-                  likeCount: post.likeCount,
-                  commentCount: post.commentCount,
-                  isLiked: isLiked,
-                  onLike: () => _toggleLike(post),
+                padding: const EdgeInsets.symmetric(horizontal: _inset),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: _postGap),
+                      child: CommunityAuthorRow(
+                        name: post.authorName,
+                        imageUrl: post.authorImage,
+                        createdAt: post.createdAt,
+                        onTap: () => _openProfile(post.authorId),
+                      ),
+                    ),
+                    if (post.media.isNotEmpty)
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          CommunityCard.mediaRadius,
+                        ),
+                        child: CommunityMediaCarousel(
+                          media: post.media,
+                          playVideos: true,
+                        ),
+                      ),
+                    if (post.caption.trim().isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: _postGap),
+                        child: MentionText(text: post.caption),
+                      ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: _postGap),
+                      child: CommunityCounts(
+                        likeCount: post.likeCount,
+                        commentCount: post.commentCount,
+                        isLiked: isLiked,
+                        onLike: () => _toggleLike(post),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const Divider(
